@@ -12,12 +12,15 @@ export const AllRoutes = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="" element={<Home />} />
 
-        <Route path="propertyList" element={<PropertyList />} />
-        <Route path="properDetails" element={<PropertyDetails />} />
-        <Route path="contactUs" element={<ContactUs />} />
-        <Route path="aboutUs" element={<AboutUs />} />
+        <Route path="property/propertyList" element={<PropertyList />} />
+        <Route
+          path="property//detail?externalID="
+          element={<PropertyDetails />}
+        />
+        <Route path="property/contactUs" element={<ContactUs />} />
+        <Route path="property/aboutUs" element={<AboutUs />} />
 
         <Route path="*" element={<PageNotFound />} />
       </Routes>

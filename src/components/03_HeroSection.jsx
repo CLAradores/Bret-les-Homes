@@ -8,13 +8,14 @@ export const HeroSection = () => {
         className="text-white flex flex-col justify-center text-center"
         style={{ height: '70vh' }}
       >
-        <h1 className="text-6xl font-bold max-auto">
-          Lorem ipsum dolor sit amet.
+        <h1 className="text-6xl font-bold max-auto mb-10">
+          Find Your Dream Home
         </h1>
-        <h3 className="text-xl mx-auto" style={{ width: '40rem' }}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur
-          voluptate officiis veritatis doloribus! Asperiores magnam, dolorem
-          ducimus fugit in deleniti.
+        <h3 className="text-xl mx-auto" style={{ width: '50rem' }}>
+          Your Source for Dream Homes! Explore a world of curated real estate
+          listings designed to fulfill your homeownership dreams. Whether you're
+          buying, selling, or just exploring, we're here to guide you every step
+          of the way. Start your real estate journey with us today!"
         </h3>
         <Filter />
       </div>

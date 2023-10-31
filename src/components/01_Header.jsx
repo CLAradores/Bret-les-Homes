@@ -8,7 +8,7 @@ export const Header = () => {
     <div>
       <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <Link to="/" className="flex items-center">
+          <Link to="" className="flex items-center">
             <img
               src={Logo}
               className="h-10 mr-3 rounded-full p-1 "
@@ -60,7 +60,7 @@ export const Header = () => {
             <ul className="flex flex-col p-4 md:p-0 mt-4  border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 font-bold">
               <li>
                 <NavLink
-                  to="/"
+                  to=""
                   className={({ isActive }) =>
                     [isActive ? 'active--link' : ''].join(' ')
                   }
@@ -71,7 +71,7 @@ export const Header = () => {
               </li>
               <li>
                 <NavLink
-                  to="propertyList"
+                  to="property/"
                   className={({ isActive }) =>
                     [isActive ? 'active--link' : ''].join(' ')
                   }

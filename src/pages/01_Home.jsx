@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useFetch } from '../hooks/useFetch';
+// import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HeroSection } from '../components';
 import { Cards } from '../components';
@@ -15,32 +16,36 @@ import { Tooltip } from '@material-tailwind/react';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 
 const url =
-  'https:https://bayut.p.rapidapi.com/properties/list?locationExternalIDs=5002%2C6020&purpose=for-sale&hitsPerPage=25&page=0&lang=en&categoryExternalID=25&priceMin=1000000';
+  'https://bayut.p.rapidapi.com/properties/list?locationExternalIDs=5002%2C6020&purpose=for-sale&hitsPerPage=9&page=0&lang=en&categoryExternalID=25&priceMin=1000000';
 const options = {
   method: 'GET',
-  header: {
-    'X-RapidAPI-Key': '5a23487026msh1a54790fbd25df3p12fb83jsn7db3bedeefd5',
+  headers: {
+    'X-RapidAPI-Key': '0afd97d6e6msh163ebab7b5a9ed5p172e9ejsn844f732d5dee',
     'X-RapidAPI-Host': 'bayut.p.rapidapi.com',
   },
 };
 export const Home = () => {
-  const [properties, setProperties] = useState([]);
+  // const [properties, setProperties] = useState([]);
+  const { data: properties } = useFetch(url, options);
 
-  useEffect(() => {
-    const fetchProperties = async (req, res) => {
-      try {
-        const response = await fetch(req, res);
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        const result = await response.json();
-        console.log(result);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchProperties(url, options);
-  }, []);
+  // const fetchProperties = async (req, res) => {
+  //   try {
+  //     const response = await fetch(req, res);
+  //     if (!response.ok) {
+  //       throw new Error('Network response was not ok');
+  //     }
+  //     const result = await response.json();
+  //     setProperties(result.hits);
+
+  //     console.log(result.hits);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   fetchProperties(url, options);
+  // }, [url, options]);
 
   return (
     <div>
@@ -48,19 +53,23 @@ export const Home = () => {
         <HeroSection />
         <main>
           <h1
-            className="font-bold text-5xl text-center  "
-            style={{ marginTop: '10rem' }}
+            className="font-bold text-2xl text-center  "
+            style={{ marginTop: '5rem' }}
           >
             Featured Property
           </h1>
           <section className="max-w-7xl m-auto py-7">
-            <div className="flex flex-wrap justify-center mx-auto">
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
-              <Cards />
+            <div className="flex flex-wrap justify-center m-10 ">
+              {properties.map((property) => (
+                <Cards
+                  key={property.id}
+                  property={property}
+                  location={property.location[1].name}
+                  category={property.category[1].name}
+                  coverPhoto={property.coverPhoto.url}
+                />
+              ))}
+              {/* <Cards /> */}
             </div>
           </section>
           <main className="bg-red-50">
@@ -141,7 +150,7 @@ export const Home = () => {
                   <p className="mt-8 font-semibold text-2xl">Villas</p>
                 </Link>
                 <Link
-                  to="/"
+                  to="propertyList"
                   className="flex flex-col justify-center items-center text-center  "
                 >
                   <Tooltip content="Click for More:">

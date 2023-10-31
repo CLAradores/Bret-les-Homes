@@ -1,5 +1,3 @@
-import { Footer } from '../components';
-// import { HeroSection } from '../components';
 import { Form } from '../components';
 import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';

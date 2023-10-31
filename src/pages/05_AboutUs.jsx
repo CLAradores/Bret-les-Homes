@@ -1,6 +1,6 @@
 import { SemiFooter } from '../components';
-// import { HeroSection } from '../components';
 import photo from '../assets/teamwork2.webp';
+
 export const AboutUs = () => {
   return (
     <div>
