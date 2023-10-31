@@ -16,7 +16,7 @@ export const AllRoutes = () => {
 
         <Route path="property/propertyList" element={<PropertyList />} />
         <Route
-          path="property//detail?externalID="
+          path="property/detail?externalID="
           element={<PropertyDetails />}
         />
         <Route path="property/contactUs" element={<ContactUs />} />
