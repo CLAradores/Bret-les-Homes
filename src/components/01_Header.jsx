@@ -71,7 +71,7 @@ export const Header = () => {
               </li>
               <li>
                 <NavLink
-                  to="property/"
+                  to="properties/propertyList"
                   className={({ isActive }) =>
                     [isActive ? 'active--link' : ''].join(' ')
                   }
@@ -81,7 +81,7 @@ export const Header = () => {
               </li>
               <li>
                 <NavLink
-                  to="contactUs"
+                  to="properties/contactUs"
                   className={({ isActive }) =>
                     [isActive ? 'active--link' : ''].join(' ')
                   }
@@ -91,7 +91,7 @@ export const Header = () => {
               </li>
               <li>
                 <NavLink
-                  to="aboutUs"
+                  to="properties/aboutUs"
                   className={({ isActive }) =>
                     [isActive ? 'active--link' : ''].join(' ')
                   }

@@ -13,17 +13,15 @@ export const Form = () => {
           '& > :not(style)': { m: 1 },
         }}
       >
-        <h1 className="text-5xl text-center p-8">Message Us</h1>
+        <h1 className="text-4xl text-center p-8">Message Us</h1>
         <div className="flex  space-x-4">
           <TextField
             fullWidth
-            helperText="Please enter your firstname"
             id="demo-helper-text-misaligned"
             label="Firstname"
           />
           <TextField
             fullWidth
-            helperText="Please enter your lastname"
             id="demo-helper-text-misaligned"
             label="Lastame"
           />

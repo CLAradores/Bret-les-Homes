@@ -14,13 +14,10 @@ export const AllRoutes = () => {
       <Routes>
         <Route path="" element={<Home />} />
 
-        <Route path="property/propertyList" element={<PropertyList />} />
-        <Route
-          path="property/detail?externalID="
-          element={<PropertyDetails />}
-        />
-        <Route path="property/contactUs" element={<ContactUs />} />
-        <Route path="property/aboutUs" element={<AboutUs />} />
+        <Route path="properties/propertyList" element={<PropertyList />} />
+        <Route path="properties/:externalID" element={<PropertyDetails />} />
+        <Route path="properties/contactUs" element={<ContactUs />} />
+        <Route path="properties/aboutUs" element={<AboutUs />} />
 
         <Route path="*" element={<PageNotFound />} />
       </Routes>

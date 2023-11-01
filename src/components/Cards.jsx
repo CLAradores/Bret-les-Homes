@@ -17,11 +17,11 @@ import BookmarkOutlinedIcon from '@mui/icons-material/BookmarkOutlined';
 import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
 
 export function Cards({ property, location, category, coverPhoto }) {
-  const { price, id, title, area, product } = property;
+  const { price, id, title, area, product, agency } = property;
 
   function makeShort() {
-    if (title.length > 40 || title.length < 40) {
-      return title.slice(0, 37);
+    if (title.length > 1000 || title.length < 1000) {
+      return title.slice(0, 35) + '...';
     }
   }
 
@@ -38,26 +38,32 @@ export function Cards({ property, location, category, coverPhoto }) {
           alt="ui/ux review check"
         />
         <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
-        <IconButton
+        {/* <IconButton
           size="lg"
           color="red"
           variant="text"
           className="!absolute top-4 left-4 rounded-full text-xl"
         >
           <BookmarkBorderOutlinedIcon />
-        </IconButton>
+        </IconButton> */}
       </CardHeader>
       <CardBody className="flex flex-col">
         <div className="mb-3 flex justify-between ">
           <Typography
             variant="lead"
             color="blue-gray"
-            className="font-bold text-xl my-3"
+            className="font-bold text-xl "
           >
             $ {putComma(price)}
           </Typography>
 
-          <Typography
+          <img
+            style={{ width: '40px' }}
+            className="rounded-full"
+            src={agency?.logo?.url}
+            alt="agency logo"
+          />
+          {/* <Typography
             color="blue-gray"
             className="flex items-center gap-1 font-normal justify-end "
           >
@@ -74,13 +80,13 @@ export function Cards({ property, location, category, coverPhoto }) {
               />
             </svg>
             5.0
-          </Typography>
+          </Typography> */}
         </div>
 
         <Typography
           variant="h3"
           color="blue-gray"
-          className="font-meduim text-md my-3"
+          className="font-meduim text-md mb-2"
         >
           Property ID: {id}
         </Typography>
@@ -94,7 +100,7 @@ export function Cards({ property, location, category, coverPhoto }) {
         </Typography>
 
         <div className="flex justify-between mt-3">
-          <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
+          <div className="group  inline-flex flex-wrap items-center gap-3">
             <Tooltip content={location}>
               <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
                 <LocationOnIcon />
@@ -127,7 +133,7 @@ export function Cards({ property, location, category, coverPhoto }) {
               </span>
             </Tooltip>
           </div>
-          <Link to="propertyDetails" className="mt-8">
+          <Link to={`/properties/${property.externalID}`} className="mt-3">
             <Tooltip content="See more details">
               <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70 flex">
                 <MoreHorizIcon />
@@ -136,8 +142,8 @@ export function Cards({ property, location, category, coverPhoto }) {
           </Link>
         </div>
       </CardBody>
-      <CardFooter className="pt-3 mt-auto">
-        <Link to="contactUs">
+      <CardFooter className="pt-3 ">
+        <Link to="propertyies/contactUs">
           <Button size="lg" fullWidth={true}>
             Booked a Viewing
           </Button>

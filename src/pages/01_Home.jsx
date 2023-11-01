@@ -20,7 +20,7 @@ const url =
 const options = {
   method: 'GET',
   headers: {
-    'X-RapidAPI-Key': '0afd97d6e6msh163ebab7b5a9ed5p172e9ejsn844f732d5dee',
+    'X-RapidAPI-Key': '44ed021340mshdbb1146f5fe1d18p17b071jsn3689b64edc37',
     'X-RapidAPI-Host': 'bayut.p.rapidapi.com',
   },
 };
@@ -78,8 +78,8 @@ export const Home = () => {
               style={{ height: '100vh' }}
             >
               <div className="text-left w-1/2 ms-10">
-                <h3 className="text-3xl font-medium mb-4">Craft Your Dream</h3>
-                <h3 className="text-5xl font-bold mb-4">
+                <h3 className="text-2xl font-medium mb-4">Craft Your Dream</h3>
+                <h3 className="text-4xl font-bold mb-4">
                   Bret'les Premier Real Estate
                 </h3>
                 <h3 className="text-2xl font-base mb-4">
