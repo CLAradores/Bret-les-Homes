@@ -14,16 +14,16 @@ export const ContactUs = () => {
             <Form />
           </div>
           <div className="mt-10 mb-8 w-2/4 text-center">
-            <h2 className="text-5xl mb-8 ">Get in Touch</h2>
-            <EmailIcon style={{ fontSize: '4rem' }} />
+            <h2 className="text-3xl mb-8 ">Get in Touch</h2>
+            <EmailIcon style={{ fontSize: '3rem' }} />
             <h2 className="font-base text-xl mt-8 mb-5">bretles67@gmail.com</h2>
-            <LocalPhoneIcon style={{ fontSize: '4rem' }} />
+            <LocalPhoneIcon style={{ fontSize: '3rem' }} />
             <h2 className="mt-8 mb-8">+1 234 567 890</h2>
-            <h2 className="text-4xl font-bold">Connect with Us</h2>
+            <h2 className="text-2xl font-bold">Connect with Us</h2>
             <div className="flex space-x-5 mt-12 justify-center">
-              <FacebookIcon style={{ fontSize: '3rem' }} />
-              <InstagramIcon style={{ fontSize: '3rem' }} />
-              <TwitterIcon style={{ fontSize: '3rem' }} />
+              <FacebookIcon style={{ fontSize: '2rem' }} />
+              <InstagramIcon style={{ fontSize: '2rem' }} />
+              <TwitterIcon style={{ fontSize: '2rem' }} />
             </div>
           </div>
         </div>

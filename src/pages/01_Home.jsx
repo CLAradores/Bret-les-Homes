@@ -20,11 +20,11 @@ const url =
 const options = {
   method: 'GET',
   headers: {
-    'X-RapidAPI-Key': '44ed021340mshdbb1146f5fe1d18p17b071jsn3689b64edc37',
+    'X-RapidAPI-Key': 'd15fb6b83dmsh4976ad9b7f4313dp1dfa02jsn793120d2194c',
     'X-RapidAPI-Host': 'bayut.p.rapidapi.com',
   },
 };
-export const Home = () => {
+export default function Home() {
   // const [properties, setProperties] = useState([]);
   const { data: properties } = useFetch(url, options);
 
@@ -47,13 +47,28 @@ export const Home = () => {
   //   fetchProperties(url, options);
   // }, [url, options]);
 
+  // ======================================= ito bago
+  // function showSpinner() {
+  //   document.querySelector('.spinner').classList.add('show');
+  // }
+
+  // function hideSpinner() {
+  //   document.querySelector('.spinner').classList.remove('show');
+  // }
+
+  // if (!properties) {
+  //   return showSpinner();
+  // } else {
+  //   hideSpinner();
+  // }
+
   return (
     <div>
       <div>
         <HeroSection />
-        <main>
+        <div>
           <h1
-            className="font-bold text-2xl text-center  "
+            className="font-bold text-4xl text-center  "
             style={{ marginTop: '5rem' }}
           >
             Featured Property
@@ -72,7 +87,7 @@ export const Home = () => {
               {/* <Cards /> */}
             </div>
           </section>
-          <main className="bg-red-50">
+          <main className="">
             <section
               className="flex justify-center items-center self-center "
               style={{ height: '100vh' }}
@@ -97,27 +112,27 @@ export const Home = () => {
               </div>
             </section>
           </main>
-          <main>
+          <div>
             <div
-              className="flex flex-col justify-center"
-              style={{ height: '100vh' }}
+              className="flex flex-col justify-center bg-black text-white"
+              style={{ height: '70vh', width: '100vw' }}
             >
               <div className="flex flex-col text-center">
-                <h3 className="text-lg mb-28">We're Here To Help You</h3>
-                <h1 className="mb-36 text-4xl font-medium">
+                <h3 className="text-lg mb-10">We're Here To Help You</h3>
+                <h1 className="mb-10 text-4xl font-medium">
                   What Are You Looking For?
                 </h1>
               </div>
               <div className="flex flex-nowrap  justify-center space-x-10">
                 <Link
-                  to="/"
+                  to="properties/propertyList"
                   className="flex flex-col justify-center items-center text-center  "
                 >
                   <img className="w-44 rounded-lg h-20" src={photo2} alt="" />
                   <p className="mt-8 font-semibold text-2xl">Apartments</p>
                 </Link>
                 <Link
-                  to="/"
+                  to="properties/propertyList"
                   className="flex flex-col justify-center items-center text-center  "
                 >
                   <img
@@ -128,7 +143,7 @@ export const Home = () => {
                   <p className="mt-8 font-semibold text-2xl">Townhouse</p>
                 </Link>
                 <Link
-                  to="/"
+                  to="properties/propertyList"
                   className="flex flex-col justify-center items-center text-center  "
                 >
                   <img
@@ -139,7 +154,7 @@ export const Home = () => {
                   <p className="mt-8 font-semibold text-2xl">Penthouses</p>
                 </Link>
                 <Link
-                  to="/"
+                  to="properties/propertyList"
                   className="flex flex-col justify-center items-center text-center  "
                 >
                   <img
@@ -150,7 +165,7 @@ export const Home = () => {
                   <p className="mt-8 font-semibold text-2xl">Villas</p>
                 </Link>
                 <Link
-                  to="propertyList"
+                  to="properties/propertyList"
                   className="flex flex-col justify-center items-center text-center  "
                 >
                   <Tooltip content="Click for More:">
@@ -158,52 +173,56 @@ export const Home = () => {
                       <AddCircleIcon />
                     </span>
                   </Tooltip>
-                  <p className="mt-8 font-semibold text-2xl">Add More</p>
+                  <p className="mt-8 font-semibold text-2xl">And More</p>
                 </Link>
               </div>
             </div>
-          </main>
-          <main>
+          </div>
+          <div>
             <div
               style={{ height: '100vh' }}
               className="flex flex-col text-center items-center justify-center"
             >
-              <h2 className="text-6xl font-medium mb-14">
+              <h2 className="text-4xl font-medium mb-14">
                 HOW CAN WE HELP YOU?
               </h2>
-              <p className="mb-32 font-medium">
-                We at Presello are committed to deliver the best brokering
+              <p className="mb-16 font-medium w-1/2">
+                We at Bret'les are committed to deliver the best brokering
                 service in the market. Whether you are looking to sell your
                 property or purchase your next investment, we are here to assist
                 you.
               </p>
               <div className="flex space-x-24">
                 <div>
-                  <img
-                    className="w-72 h-72 p-1 bg-black rounded-md"
-                    src={img1}
-                    alt=""
-                  />
-                  <h2 className="text-3xl font-semibold mt-10 ">
-                    Buy a Property
-                  </h2>
+                  <Link to="properties/propertyList">
+                    <img
+                      className="w-72 h-72 p-1 bg-gray-500 rounded-md"
+                      src={img1}
+                      alt="Buy_IMG"
+                    />
+                    <h2 className="text-3xl font-semibold mt-10 ">
+                      Buy a Property
+                    </h2>
+                  </Link>
                 </div>
                 <div>
-                  <img
-                    className="w-72 h-72 p-1 bg-black rounded-md"
-                    src={img2}
-                    alt=""
-                  />
-                  <h2 className="text-3xl font-semibold mt-10">
-                    Sell a Property
-                  </h2>
+                  <Link to="properties/contactUs">
+                    <img
+                      className="w-72 h-72 p-1 bg-gray-500 rounded-md"
+                      src={img2}
+                      alt="Sell_img"
+                    />
+                    <h2 className="text-3xl font-semibold mt-10">
+                      Sell a Property
+                    </h2>
+                  </Link>
                 </div>
               </div>
             </div>
-          </main>
-        </main>
+          </div>
+        </div>
       </div>
       <SemiFooter />
     </div>
   );
-};
+}

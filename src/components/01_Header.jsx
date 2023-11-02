@@ -6,22 +6,25 @@ export const Header = () => {
   const [hidden, setHidden] = useState(true);
   return (
     <div>
-      <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+      <nav className="bg-black dark:bg-gray-900 fixed w-full z-20 top-0 left-0 ">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <Link to="" className="flex items-center">
-            <img
-              src={Logo}
-              className="h-10 mr-3 rounded-full p-1 "
-              alt="Bret'les Logo"
-            />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              Bret'les
-            </span>
-          </Link>
+          <div style={{ border: '2px white solid' }} className=" rounded">
+            <Link to="" className="flex items-center ">
+              <img
+                src={Logo}
+                className="h-10 mr-3 rounded-full p-1 bg-yellow-700 "
+                alt="Bret'les Logo"
+              />
+              <span className="text-white self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+                Bret'les
+              </span>
+            </Link>
+          </div>
           <div className="flex md:order-2">
             <Link
+              to="properties/contactUs"
               type="button"
-              className="text-black focus:ring-4 focus:outline-none  font-bold rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 bg--color"
+              className="text-black focus:ring-4 focus:outline-none  font-bold  text-sm px-4 py-2 text-center mr-3 md:mr-0 bg--color hover:bg-sky-700"
             >
               Booked a Viewing
             </Link>
@@ -57,7 +60,7 @@ export const Header = () => {
             } items-center justify-between  w-full md:flex md:w-auto md:order-1`}
             id="navbar-sticky"
           >
-            <ul className="flex flex-col p-4 md:p-0 mt-4  border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 font-bold">
+            <ul className="flex text-white font-bold space-x-5">
               <li>
                 <NavLink
                   to=""

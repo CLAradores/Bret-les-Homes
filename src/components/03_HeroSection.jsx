@@ -8,7 +8,7 @@ export const HeroSection = () => {
         className="text-white flex flex-col justify-center text-center"
         style={{ height: '70vh' }}
       >
-        <h1 className="text-4xl font-bold max-auto mb-10">
+        <h1 className="text-5xl font-bold max-auto mb-10">
           Find Your Dream Home
         </h1>
         <h3 className="text-md mx-auto" style={{ width: '50rem' }}>

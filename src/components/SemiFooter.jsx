@@ -29,44 +29,40 @@ export const SemiFooter = () => {
         style={{ height: '100vh' }}
         className="flex flex-col items-center  text-center justify-center  overflow-hidden"
       >
-        <h1 className="text-6xl mb-10">WHAT CLIENTS ARE SAYING</h1>
+        <h1 className="text-4xl mb-10">WHAT CLIENTS ARE SAYING</h1>
         <div className="mb-44">
           <Rating value={5} />
         </div>
         <div className="flex dispaly--inline">
           <div className="animate--slide">
-            <div className="flex space-x-10">
+            <div className="flex space-x-10 text-gray-900">
               <div>
-                <p className="mb-24 w-96 text-gray-700 text-start">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-                  similique eaque deleniti dolorum voluptates et tenetur odio
-                  rerum? Magnam, consequatur?
+                <p className="mb-24 w-96 text-gray-900 text-start">
+                  "Working with Sarah was a breeze! She found us our dream home
+                  within our budget. Thank you, Sarah!"
                 </p>
-                <p className="font-bold">Lebroon James</p>
+                <p className="font-bold"> John W.</p>
               </div>
               <div>
                 <p className="mb-24 w-96 text-gray-700 text-start">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-                  similique eaque deleniti dolorum voluptates et tenetur odio
-                  rerum? Magnam, consequatur?
+                  "Tom's expertise and dedication made selling our house a
+                  smooth experience. Highly recommended!"
                 </p>
-                <p className="font-bold">James Reid</p>
+                <p className="font-bold">Emily S.</p>
               </div>
               <div>
                 <p className="mb-24 w-96 text-gray-700 text-start">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-                  similique eaque deleniti dolorum voluptates et tenetur odio
-                  rerum? Magnam, consequatur?
+                  "I can't thank Lisa enough for her patience and guidance
+                  throughout our home search. She's the best!"
                 </p>
-                <p className="font-bold">James Bond</p>
+                <p className="font-bold">Michael R</p>
               </div>
               <div>
                 <p className="mb-24 w-96 text-gray-700 text-start">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-                  similique eaque deleniti dolorum voluptates et tenetur odio
-                  rerum? Magnam, consequatur?
+                  "Nancy's attention to detail and market knowledge ensured we
+                  got top dollar for our property. A true professional!"
                 </p>
-                <p className="font-bold">James Bond</p>
+                <p className="font-bold">Susan B.</p>
               </div>
             </div>
           </div>
@@ -74,58 +70,56 @@ export const SemiFooter = () => {
             <div className="flex space-x-10">
               <div>
                 <p className="mb-24 w-96 text-gray-700 text-start">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-                  similique eaque deleniti dolorum voluptates et tenetur odio
-                  rerum? Magnam, consequatur?
+                  "David made the whole buying process stress-free. He's a great
+                  communicator and always had our best interests in mind."
                 </p>
-                <p className="font-bold">Lebroon James</p>
+                <p className="font-bold">Mark C.</p>
               </div>
               <div>
                 <p className="mb-24 w-96 text-gray-700 text-start">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-                  similique eaque deleniti dolorum voluptates et tenetur odio
-                  rerum? Magnam, consequatur?
+                  "We're so grateful to Lisa for helping us find our first home.
+                  Her support and knowledge made it a fantastic journey."
                 </p>
-                <p className="font-bold">James Reid</p>
+                <p className="font-bold"> Mary and Steve M.</p>
               </div>
               <div>
                 <p className="mb-24 w-96 text-gray-700 text-start">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-                  similique eaque deleniti dolorum voluptates et tenetur odio
-                  rerum? Magnam, consequatur?
+                  "Thank you, Robert, for your exceptional service. You turned a
+                  complicated sale into a smooth transaction. We're thrilled
+                  with the results!"
                 </p>
-                <p className="font-bold">James Bond</p>
+                <p className="font-bold">Linda and James D.</p>
               </div>
               <div>
                 <p className="mb-24 w-96 text-gray-700 text-start">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-                  similique eaque deleniti dolorum voluptates et tenetur odio
-                  rerum? Magnam, consequatur?
+                  "Working with Jessica was a pleasure. She found us the perfect
+                  investment property. We couldn't be happier!"
                 </p>
-                <p className="font-bold">James Bond</p>
+                <p className="font-bold">Amanda and Michael H.</p>
               </div>
             </div>
           </div>
         </div>
       </main>
-      <main className="">
+      <div>
         <div>
           <Box
             sx={{
               display: 'flex flex-column',
               alignItems: 'center',
               maxWidth: '50vw',
+              padding: '2rem',
               margin: 'auto',
 
               '& > :not(style)': { m: 1 },
             }}
           >
-            <h1 className="text-5xl text-center p-8">Message Us</h1>
+            <h1 className="text-4xl text-center p-8">Our Newsletter</h1>
             <div className="flex  space-x-4 w-auto">
               <TextField
                 // style={{ backgroundColor: 'white' }}
                 fullWidth
-                helperText="Please enter your firstname"
+                // helperText="Please enter your firstname"
                 id="demo-helper-text-misaligned"
                 label="Firstname"
               />
@@ -157,17 +151,17 @@ export const SemiFooter = () => {
             />
             <button
               style={{ width: '100%', backgroundColor: '#e5b136' }}
-              className=" py-4  text-xl"
+              className=" py-2  text-md"
             >
               Subscribe
             </button>
           </Box>
         </div>
-      </main>
+      </div>
 
-      <div className="relative max-w-7xl m-auto">
-        <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
-          <Typography variant="h5" className="mb-6">
+      <div className="relative max-w-7xl m-auto ">
+        <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2 ">
+          <Typography variant="h5" className="mb-6 ">
             Bret'les Homes
           </Typography>
           <div className="grid grid-cols-3 justify-between gap-4">

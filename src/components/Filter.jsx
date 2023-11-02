@@ -25,71 +25,21 @@ export const Filter = () => {
           id="demo-helper-text-misaligned"
           label="Property ID"
         />
-        {/* <Autocomplete
-          disablePortal
-          id="combo-box-demo"
-          options={top100Films}
-          sx={{ width: 300 }}
-          renderInput={(params) => <TextField {...params} label="Movie" />}
-        /> */}
-        {/*  <TextField
-          select
-          fullWidth
-          id="demo-helper-text-misaligned"
-          label="Type"
-        > */}
-        {/* <option value=""></option> */}
-        {/*  </TextField>
-        <TextField
-          select
-          fullWidth
-          id="demo-helper-text-misaligned"
-          label="Location"
-        > */}
-        {/* {currencies.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
-          </option>
-        ))} */}
-        {/*  </TextField>
-        <TextField
-          select
-          fullWidth
-          id="demo-helper-text-misaligned"
-          label="Min-price"
-        > */}
-        {/* {currencies.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
-          </option>
-        ))} */}
-        {/*   </TextField>
-        <TextField
-          select
-          fullWidth
-          id="demo-helper-text-misaligned"
-          label="Max-price"
-        > */}
-        {/* {currencies.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
-          </option>
-        ))} */}
-        {/* </TextField> */}
+
         <Stack direction="row" spacing={2}>
-          <Button
+          {/* <Button
             style={{ color: '#333', borderColor: '#333' }}
             variant="outlined"
             startIcon={<DeleteIcon />}
           >
             Clear
-          </Button>
+          </Button> */}
           <Button
             style={{ backgroundColor: '#333' }}
             variant="contained"
             endIcon={<SendIcon />}
           >
-            Send
+            Search
           </Button>
         </Stack>
       </Box>

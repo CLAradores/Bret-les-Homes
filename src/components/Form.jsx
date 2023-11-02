@@ -2,6 +2,7 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
+import { blueGrey } from '@mui/material/colors';
 
 export const Form = () => {
   return (
@@ -40,9 +41,12 @@ export const Form = () => {
       </Box>
       <div className=" text-right mt-8 ">
         <Button
+          style={{
+            color: 'black',
+            borderColor: 'black',
+          }}
           variant="outlined"
-          color="error"
-          size="large"
+          size="medium"
           endIcon={<SendIcon />}
         >
           Send
