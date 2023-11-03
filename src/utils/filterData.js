@@ -6,6 +6,7 @@ export const filterData = [
     ],
     placeholder: 'Purpose',
     queryName: 'purpose',
+    id: 1,
   },
   {
     items: [
@@ -16,6 +17,8 @@ export const filterData = [
     ],
     placeholder: 'Rent Frequency',
     queryName: 'rentFrequency',
+
+    id: 2,
   },
   {
     items: [
@@ -29,6 +32,7 @@ export const filterData = [
     ],
     placeholder: 'Min Price(AED)',
     queryName: 'minPrice',
+    id: 3,
   },
   {
     items: [
@@ -51,6 +55,7 @@ export const filterData = [
     ],
     placeholder: 'Max Price(AED)',
     queryName: 'maxPrice',
+    id: 4,
   },
   {
     items: [
@@ -63,6 +68,7 @@ export const filterData = [
     ],
     placeholder: 'Sort',
     queryName: 'sort',
+    id: 5,
   },
   {
     items: [
@@ -76,6 +82,7 @@ export const filterData = [
     ],
     placeholder: 'Max Area(sqft)',
     queryName: 'areaMax',
+    id: 6,
   },
   {
     items: [
@@ -92,6 +99,7 @@ export const filterData = [
     ],
     placeholder: 'Rooms',
     queryName: 'roomsMin',
+    id: 7,
   },
   {
     items: [
@@ -108,6 +116,7 @@ export const filterData = [
     ],
     placeholder: 'Baths',
     queryName: 'bathsMin',
+    id: 8,
   },
   {
     items: [
@@ -116,6 +125,7 @@ export const filterData = [
     ],
     placeholder: 'Furnish Type',
     queryName: 'furnishingStatus',
+    id: 9,
   },
   {
     items: [
@@ -144,6 +154,7 @@ export const filterData = [
     ],
     placeholder: 'Property Type',
     queryName: 'categoryExternalID',
+    id: 10,
   },
 ];
 

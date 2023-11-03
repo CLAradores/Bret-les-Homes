@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { filterData, getFilterValues } from '../utils/filterData';
-import * as React from 'react';
 import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
 import NativeSelect from '@mui/material/NativeSelect';
@@ -9,15 +8,16 @@ export const Filter = () => {
   const [filters, setFilters] = useState(filterData);
 
   const searchProperties = (filterValues) => {
-    const path = router.pathname;
-    const { query } = router;
+    console.log(filterValues);
+    // const path = router.pathname;
+    // const { query } = router;
 
     const values = getFilterValues(filterValues);
     values.forEach((value) => {
       query[item.name] = item.value;
     });
 
-    router.push({ pathname: path, query });
+    // router.push({ pathname: path, query });
   };
 
   return (
@@ -31,11 +31,10 @@ export const Filter = () => {
             sx={{ m: 2, minWidth: 200, minHeight: 20 }}
             key={filter.queryName}
           >
-            <InputLabel variant="info" htmlFor="uncontrolled-native">
+            <InputLabel variant="standard" htmlFor="uncontrolled-native">
               {filter.placeholder}
             </InputLabel>
             <NativeSelect
-              // defaultValue={30}
               inputProps={{
                 name: 'age',
                 id: 'uncontrolled-native',
@@ -47,7 +46,9 @@ export const Filter = () => {
               {/* <option>{''}</option> */}
               {filter &&
                 filter?.items?.map((item) => (
-                  <option value={item.value}> {item.name}</option>
+                  <option key={item.name} value={item.value}>
+                    {item.name}
+                  </option>
                 ))}
             </NativeSelect>
           </FormControl>
