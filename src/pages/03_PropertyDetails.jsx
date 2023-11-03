@@ -18,7 +18,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 const options = {
   method: 'GET',
   headers: {
-    'X-RapidAPI-Key': 'd15fb6b83dmsh4976ad9b7f4313dp1dfa02jsn793120d2194c',
+    'X-RapidAPI-Key': import.meta.env.VITE_API_KEY,
     'X-RapidAPI-Host': 'bayut.p.rapidapi.com',
   },
 };
@@ -170,6 +170,7 @@ export default function PropertyDetails() {
               is over. Talk to one of our agents now to schedule a viewing.
             </p>
             <Link
+              to="properties/contactUs"
               type="button"
               className="text-black focus:ring-4 focus:outline-none w font-bold  text-sm px-4 py-2 text-center mr-3 md:mr-0 bg--color"
             >

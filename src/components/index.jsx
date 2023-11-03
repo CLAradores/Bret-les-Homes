@@ -9,3 +9,4 @@ export { Filter } from './Filter';
 export { SemiFooter } from './SemiFooter';
 export { HeroSection2 } from './HeroSection2';
 export { ScrollToTop } from './ScrollToTop';
+export { Pagination } from './Pagination';

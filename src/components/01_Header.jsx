@@ -8,7 +8,7 @@ export const Header = () => {
     <div>
       <nav className="bg-black dark:bg-gray-900 fixed w-full z-20 top-0 left-0 ">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <div style={{ border: '2px white solid' }} className=" rounded">
+          <div className=" rounded">
             <Link to="" className="flex items-center ">
               <img
                 src={Logo}

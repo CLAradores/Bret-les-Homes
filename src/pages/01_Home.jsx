@@ -1,4 +1,5 @@
 import { useFetch } from '../hooks/useFetch';
+import { useState } from 'react';
 // import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HeroSection } from '../components';
@@ -20,14 +21,30 @@ const url =
 const options = {
   method: 'GET',
   headers: {
-    'X-RapidAPI-Key': 'd15fb6b83dmsh4976ad9b7f4313dp1dfa02jsn793120d2194c',
+    'X-RapidAPI-Key': import.meta.env.VITE_API_KEY,
     'X-RapidAPI-Host': 'bayut.p.rapidapi.com',
   },
 };
 export default function Home() {
-  // const [properties, setProperties] = useState([]);
+  // const [received, setReceived] = useState(null); // handle to received data from hero || this is the onCharge data from search input
   const { data: properties } = useFetch(url, options);
 
+  // ------------------------------------- //receivedData from hero
+  // const handleDataFromHero = (data) => {
+  //   setReceived(data);
+  // };
+
+  // ---------------- //handle filter function
+  // const results = properties.filter((property) => {
+  //   return (
+  //     property.id.includes(received) &&
+  //     property.purpose === 'for-sale' &&
+  //     property.priceMin >= 1000000 &&
+  //     property.purpose === 'for-sale' &&
+  //     property.categoryExternalID === '25'
+  //   );
+  // });
+  // console.log(results.hits);
   // const fetchProperties = async (req, res) => {
   //   try {
   //     const response = await fetch(req, res);
@@ -115,7 +132,7 @@ export default function Home() {
           <div>
             <div
               className="flex flex-col justify-center bg-black text-white"
-              style={{ height: '70vh', width: '100vw' }}
+              style={{ height: '70vh', width: '100%' }}
             >
               <div className="flex flex-col text-center">
                 <h3 className="text-lg mb-10">We're Here To Help You</h3>

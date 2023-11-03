@@ -58,7 +58,7 @@ export function Cards({ property, location, category, coverPhoto }) {
           </Typography>
 
           <img
-            style={{ width: '40px' }}
+            style={{ width: '40px', height: '40px' }}
             className="rounded-full"
             src={agency?.logo?.url}
             alt="agency logo"

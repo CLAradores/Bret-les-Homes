@@ -24,10 +24,10 @@ const LINKS = [
 const currentYear = new Date().getFullYear();
 export const SemiFooter = () => {
   return (
-    <div>
+    <main>
       <main
-        style={{ height: '100vh' }}
-        className="flex flex-col items-center  text-center justify-center  overflow-hidden"
+        style={{ height: '90vh' }}
+        className="flex flex-col items-center  text-center justify-center  overflow-hidden max-w-7xl"
       >
         <h1 className="text-4xl mb-10">WHAT CLIENTS ARE SAYING</h1>
         <div className="mb-44">
@@ -102,7 +102,7 @@ export const SemiFooter = () => {
         </div>
       </main>
       <div>
-        <div>
+        <main>
           <Box
             sx={{
               display: 'flex flex-column',
@@ -156,7 +156,7 @@ export const SemiFooter = () => {
               Subscribe
             </button>
           </Box>
-        </div>
+        </main>
       </div>
 
       <div className="relative max-w-7xl m-auto ">
@@ -191,6 +191,6 @@ export const SemiFooter = () => {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
