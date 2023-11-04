@@ -24,7 +24,7 @@ export const Header = () => {
             <Link
               to="properties/contactUs"
               type="button"
-              className="text-black focus:ring-4 focus:outline-none  font-bold  text-sm px-4 py-2 text-center mr-3 md:mr-0 bg--color hover:bg-sky-700"
+              className="text-black focus:ring-4 focus:outline-none  font-bold  text-sm px-4 py-2 text-center mr-3 md:mr-0 "
             >
               Booked a Viewing
             </Link>

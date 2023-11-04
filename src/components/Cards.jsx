@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import noIMG from '../assets/wa.png';
 import {
   Card,
   CardHeader,
@@ -18,6 +20,7 @@ import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlin
 
 export function Cards({ property, location, category, coverPhoto }) {
   const { price, id, title, area, product, agency, rentFrequency } = property;
+  const navigate = useNavigate();
 
   function makeShort() {
     if (title.length > 1000 || title.length < 1000) {
@@ -30,22 +33,16 @@ export function Cards({ property, location, category, coverPhoto }) {
   }
 
   return (
-    <Card className="w-full max-w-[23rem] shadow-lg m-3 ">
+    <Card
+      className="w-full max-w-[23rem] shadow-lg m-3 hover:opacity-90 cursor-pointer transition-transform"
+      onClick={() => navigate(`/properties/${property.externalID}`)}
+    >
       <CardHeader floated={false} color="blue-gray">
         <img
           style={{ height: '200px', width: '100%' }}
-          src={coverPhoto}
+          src={coverPhoto ? coverPhoto : noIMG}
           alt="ui/ux review check"
         />
-        <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
-        {/* <IconButton
-          size="lg"
-          color="red"
-          variant="text"
-          className="!absolute top-4 left-4 rounded-full text-xl"
-        >
-          <BookmarkBorderOutlinedIcon />
-        </IconButton> */}
       </CardHeader>
       <CardBody className="flex flex-col">
         <div className="mb-3 flex justify-between ">

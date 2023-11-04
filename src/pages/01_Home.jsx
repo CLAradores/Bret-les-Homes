@@ -26,24 +26,8 @@ const options = {
   },
 };
 export default function Home() {
-  // const [received, setReceived] = useState(null); // handle to received data from hero || this is the onCharge data from search input
   const { data: properties } = useFetch(url, options);
 
-  // ------------------------------------- //receivedData from hero
-  // const handleDataFromHero = (data) => {
-  //   setReceived(data);
-  // };
-
-  // ---------------- //handle filter function
-  // const results = properties.filter((property) => {
-  //   return (
-  //     property.id.includes(received) &&
-  //     property.purpose === 'for-sale' &&
-  //     property.priceMin >= 1000000 &&
-  //     property.purpose === 'for-sale' &&
-  //     property.categoryExternalID === '25'
-  //   );
-  // });
   // console.log(results.hits);
   // const fetchProperties = async (req, res) => {
   //   try {
@@ -87,11 +71,11 @@ export default function Home() {
         <div>
           <h1
             className="font-bold text-4xl text-center  "
-            style={{ marginTop: '5rem' }}
+            style={{ marginTop: '3rem' }}
           >
             Featured Property
           </h1>
-          <section className="max-w-7xl m-auto py-7">
+          <section className="max-w-7xl m-auto ">
             <div className="flex flex-wrap justify-center m-10 ">
               {properties.map((property) => (
                 <Cards
@@ -102,7 +86,6 @@ export default function Home() {
                   coverPhoto={property.coverPhoto?.url}
                 />
               ))}
-              {/* <Cards /> */}
             </div>
           </section>
           <main className="">
@@ -144,46 +127,78 @@ export default function Home() {
               <div className="flex flex-nowrap  justify-center space-x-10">
                 <Link
                   to="properties/propertyList"
-                  className="flex flex-col justify-center items-center text-center  "
+                  className=" group relative flex flex-col justify-center items-center text-center  "
                 >
-                  <img className="w-44 rounded-lg h-20" src={photo2} alt="" />
+                  <img
+                    className=" w-48 rounded-lg h-44"
+                    src={photo2}
+                    alt="ApartmentPhoto"
+                  />
                   <p className="mt-8 font-semibold text-2xl">Apartments</p>
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black-70">
+                    <div className=" absolute inset-0 flex flex-col item-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all">
+                      <button className="px-3.5 py-2 rounded-full   bg-gray-900 text-sm capitalize text-white font-semibold hidden group-hover:block ">
+                        Find Property
+                      </button>
+                    </div>
+                  </div>
                 </Link>
                 <Link
                   to="properties/propertyList"
-                  className="flex flex-col justify-center items-center text-center  "
+                  className="flex flex-col justify-center items-center text-center  group relative"
                 >
                   <img
-                    className="w-44 rounded-lg h-20"
+                    className="w-48 rounded-lg h-44"
                     src={photo4}
                     alt="Townhouses picute"
                   />
                   <p className="mt-8 font-semibold text-2xl">Townhouse</p>
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black-70">
+                    <div className=" absolute inset-0 flex flex-col item-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all">
+                      <button className="px-3.5 py-2 rounded-full   bg-gray-900 text-sm capitalize text-white font-semibold hidden group-hover:block ">
+                        Find Property
+                      </button>
+                    </div>
+                  </div>
                 </Link>
                 <Link
                   to="properties/propertyList"
-                  className="flex flex-col justify-center items-center text-center  "
+                  className="flex flex-col justify-center items-center text-center  group relative"
                 >
                   <img
-                    className="w-44 rounded-lg h-20"
+                    className="w-48 rounded-lg h-44"
                     src={photo3}
                     alt="Penthouses picute"
                   />
                   <p className="mt-8 font-semibold text-2xl">Penthouses</p>
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black-70">
+                    <div className=" absolute inset-0 flex flex-col item-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all">
+                      <button className="px-3.5 py-2 rounded-full   bg-gray-900 text-sm capitalize text-white font-semibold hidden group-hover:block ">
+                        Find Property
+                      </button>
+                    </div>
+                  </div>
                 </Link>
                 <Link
                   to="properties/propertyList"
-                  className="flex flex-col justify-center items-center text-center  "
+                  className="flex flex-col justify-center items-center text-center group relative "
                 >
                   <img
-                    className="w-44 rounded-lg h-20"
+                    className="w-48 rounded-lg h-44"
                     src={photo1}
                     alt="Villas picute"
                   />
                   <p className="mt-8 font-semibold text-2xl">Villas</p>
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black-70">
+                    <div className=" absolute inset-0 flex flex-col item-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all">
+                      <button className="px-3.5 py-2 rounded-full   bg-gray-900 text-sm capitalize text-white font-semibold hidden group-hover:block ">
+                        Find Property
+                      </button>
+                    </div>
+                  </div>
                 </Link>
                 <Link
-                  to="properties/propertyList"
+                  to="/search"
                   className="flex flex-col justify-center items-center text-center  "
                 >
                   <Tooltip content="Click for More:">
@@ -212,10 +227,10 @@ export default function Home() {
               </p>
               <div className="flex space-x-24">
                 <div>
-                  <Link to="properties/propertyList">
+                  <Link to="/search">
                     <img
                       className="w-72 h-72 p-1 bg-gray-500 rounded-md"
-                      src={img1}
+                      src={img2}
                       alt="Buy_IMG"
                     />
                     <h2 className="text-3xl font-semibold mt-10 ">
@@ -224,14 +239,14 @@ export default function Home() {
                   </Link>
                 </div>
                 <div>
-                  <Link to="properties/contactUs">
+                  <Link to="/search">
                     <img
                       className="w-72 h-72 p-1 bg-gray-500 rounded-md"
-                      src={img2}
+                      src={img1}
                       alt="Sell_img"
                     />
                     <h2 className="text-3xl font-semibold mt-10">
-                      Sell a Property
+                      Rent a Property
                     </h2>
                   </Link>
                 </div>
