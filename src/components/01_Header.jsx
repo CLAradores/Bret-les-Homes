@@ -74,7 +74,7 @@ export const Header = () => {
               </li>
               <li>
                 <NavLink
-                  to="properties/propertyList"
+                  to="search"
                   className={({ isActive }) =>
                     [isActive ? 'active--link' : ''].join(' ')
                   }

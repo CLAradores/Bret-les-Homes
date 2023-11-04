@@ -17,11 +17,11 @@ import BookmarkOutlinedIcon from '@mui/icons-material/BookmarkOutlined';
 import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
 
 export function Cards({ property, location, category, coverPhoto }) {
-  const { price, id, title, area, product, agency } = property;
+  const { price, id, title, area, product, agency, rentFrequency } = property;
 
   function makeShort() {
     if (title.length > 1000 || title.length < 1000) {
-      return title.slice(0, 35) + '...';
+      return title.slice(0, 30) + '...';
     }
   }
 
@@ -54,7 +54,7 @@ export function Cards({ property, location, category, coverPhoto }) {
             color="blue-gray"
             className="font-bold text-xl "
           >
-            $ {putComma(price)}
+            د.إ {putComma(price)} {rentFrequency && `/ ${rentFrequency}`}
           </Typography>
 
           <img

@@ -83,6 +83,7 @@ export default function Home() {
     <div>
       <div>
         <HeroSection />
+
         <div>
           <h1
             className="font-bold text-4xl text-center  "
@@ -98,7 +99,7 @@ export default function Home() {
                   property={property}
                   location={property.location[1].name}
                   category={property.category[1].name}
-                  coverPhoto={property.coverPhoto.url}
+                  coverPhoto={property.coverPhoto?.url}
                 />
               ))}
               {/* <Cards /> */}

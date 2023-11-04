@@ -1,6 +1,6 @@
 import { useState } from 'react';
 // import HeroImg from '../assets/her01.png';
-import { Filter } from '../components';
+// import { Filter } from '../components';
 
 export const HeroSection = () => {
   return (
@@ -18,7 +18,7 @@ export const HeroSection = () => {
           buying, selling, or just exploring, we're here to guide you every step
           of the way. Start your real estate journey with us today!"
         </h3>
-        <Filter />
+        {/* <Filter /> */}
       </div>
     </div>
   );

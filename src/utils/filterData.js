@@ -52,12 +52,18 @@ export const filterData = [
       { name: '800,000', value: '800000' },
       { name: '900,000', value: '900000' },
       { name: '1000,000', value: '1000000' },
+      { name: '10,000,000', value: '10000000' },
+      { name: '20,000,000', value: '20000000' },
+      { name: '30,000,000', value: '30000000' },
+      { name: '40,000,000', value: '40000000' },
+      { name: '50,000,000', value: '50000000' },
+      { name: '60,000,000', value: '60000000' },
     ],
     placeholder: 'Max Price(AED)',
     queryName: 'maxPrice',
     id: 4,
   },
-  {
+  /*   {
     items: [
       { name: 'Lowest Price', value: 'price-asc' },
       { name: 'Highest Price', value: 'price-des' },
@@ -69,8 +75,8 @@ export const filterData = [
     placeholder: 'Sort',
     queryName: 'sort',
     id: 5,
-  },
-  {
+  }, */
+  /*   {
     items: [
       { name: '1000', value: '1000' },
       { name: '2000', value: '2000' },
@@ -83,8 +89,8 @@ export const filterData = [
     placeholder: 'Max Area(sqft)',
     queryName: 'areaMax',
     id: 6,
-  },
-  {
+  }, */
+  /*   {
     items: [
       { name: '1', value: '1' },
       { name: '2', value: '2' },
@@ -100,8 +106,8 @@ export const filterData = [
     placeholder: 'Rooms',
     queryName: 'roomsMin',
     id: 7,
-  },
-  {
+  }, */
+  /* {
     items: [
       { name: '1', value: '1' },
       { name: '2', value: '2' },
@@ -117,8 +123,8 @@ export const filterData = [
     placeholder: 'Baths',
     queryName: 'bathsMin',
     id: 8,
-  },
-  {
+  }, */
+  /*   {
     items: [
       { name: 'Furnished', value: 'furnished' },
       { name: 'Unfurnished', value: 'unfurnished' },
@@ -126,7 +132,7 @@ export const filterData = [
     placeholder: 'Furnish Type',
     queryName: 'furnishingStatus',
     id: 9,
-  },
+  }, */
   {
     items: [
       { name: 'Apartment', value: '4' },

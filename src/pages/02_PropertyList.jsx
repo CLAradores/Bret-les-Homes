@@ -5,13 +5,36 @@ import { Cards } from '../components';
 import { HeroSection } from '../components';
 import { SemiFooter } from '../components';
 import { Link } from 'react-router-dom';
+import { FilterTitle } from '../components';
 
 export default function PropertyList() {
+  const [received, setReceived] = useState('');
   const [move, setMove] = useState(4);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostPerPage] = useState(9);
 
-  const url = `https://bayut.p.rapidapi.com/properties/list?locationExternalIDs=5002%2C6020&purpose=for-sale&lang=en&categoryExternalID=${move}`;
+  const receivedData = (data) => {
+    // Use to Received Data
+    setReceived(data);
+  };
+
+  // -----------------------------------
+  const purpose = received.purpose || 'for-sale';
+  const rentFrequency = received.rentFrequency || ' ';
+  const minPrice = received.minPrice || ' ';
+  const maxPrice = received.maxPrice || ' ';
+  const roomsMin = received.roomsMin || ' ';
+  const bathsMin = received.bathsMin || ' ';
+  const sort = received.sort || 'price-desc';
+  const areaMax = received.areaMax || '35000';
+  const locationExternalIDs = received.locationExternalIDs || '5002';
+  const categoryExternalID = received.categoryExternalID || '4';
+  const baseUrl = 'https://bayut.p.rapidapi.com';
+
+  const url = `${baseUrl}/properties/list?locationExternalIDs=${locationExternalIDs}&purpose=${purpose}&categoryExternalID=${categoryExternalID}&bathsMin=${bathsMin}&rentFrequency=${rentFrequency}&priceMin=${minPrice}&priceMax=${maxPrice}&roomsMin=${roomsMin}&sort=${sort}&areaMax=${areaMax}`;
+  // -----------------------------------
+
+  // const url = `https://bayut.p.rapidapi.com/properties/list?locationExternalIDs=5002%2C6020&purpose=for-sale&lang=en&categoryExternalID=${move}`;
   const options = {
     method: 'GET',
     headers: {
@@ -44,138 +67,13 @@ export default function PropertyList() {
   } else {
     hideSpinner();
   } */
+  // ------------
 
   return (
     <div>
       <HeroSection />
-      <main className="my-10">
-        <div className="mt-16 text-center ">
-          <ul className="flex flex-nowrap overflow-x-scroll text-md font-semibold space-x-4 text-center justify-center ">
-            <Link to="/properties/propertyList">
-              <li
-                className="py-2 px-4 rounded mt-5"
-                onClick={() => handlePropertyTypeClick(4)}
-              >
-                Apartment
-              </li>
-            </Link>
-            <Link to="/properties/propertyList">
-              <li
-                className="py-2 px-4 rounded mt-5"
-                onClick={() => handlePropertyTypeClick(16)}
-              >
-                Townhouses
-              </li>
-            </Link>
-            <Link to="/properties/propertyList">
-              <li
-                className="py-2 px-4 rounded mt-5"
-                onClick={() => handlePropertyTypeClick(3)}
-              >
-                Villas
-              </li>
-            </Link>
-            <Link to="/properties/propertyList">
-              <li
-                className="py-2 px-4 rounded mt-5"
-                onClick={() => handlePropertyTypeClick(18)}
-              >
-                Penthouses
-              </li>
-            </Link>
-            <Link to="/properties/propertyList">
-              <li
-                className="py-2 px-4 rounded mt-5"
-                onClick={() => handlePropertyTypeClick(21)}
-              >
-                Hotel Apartments
-              </li>
-            </Link>
-            <Link to="/properties/propertyList">
-              <li
-                className="py-2 px-4 rounded mt-5"
-                onClick={() => handlePropertyTypeClick(19)}
-              >
-                Villa Compound
-              </li>
-            </Link>
-            <Link to="/properties/propertyList">
-              <li
-                className="py-2 px-4 rounded mt-5"
-                onClick={() => handlePropertyTypeClick(14)}
-              >
-                Residential Plot
-              </li>
-            </Link>
-            <Link to="/properties/propertyList">
-              <li
-                className="py-2 px-4 rounded mt-5"
-                onClick={() => handlePropertyTypeClick(12)}
-              >
-                Residential Floor
-              </li>
-            </Link>
-            <Link to="/properties/propertyList">
-              <li
-                className="py-2 px-4 rounded mt-5"
-                onClick={() => handlePropertyTypeClick(17)}
-              >
-                Residential Building
-              </li>
-            </Link>
-
-            <Link to="/properties/propertyList">
-              <li
-                className="py-2 px-4 rounded mt-5"
-                onClick={() => handlePropertyTypeClick(25)}
-              >
-                Commercial Villa
-              </li>
-            </Link>
-
-            <Link to="/properties/propertyList">
-              <li
-                className="py-2 px-4 rounded mt-5"
-                onClick={() => handlePropertyTypeClick(15)}
-              >
-                Commercial Plot
-              </li>
-            </Link>
-            <Link to="/properties/propertyList">
-              <li
-                className="py-2 px-4 rounded mt-5"
-                onClick={() => handlePropertyTypeClick(13)}
-              >
-                Commercial Floor
-              </li>
-            </Link>
-            <Link to="/properties/propertyList">
-              <li
-                className="py-2 px-4 rounded mt-5"
-                onClick={() => handlePropertyTypeClick(10)}
-              >
-                Commercial Building
-              </li>
-            </Link>
-            <Link to="/properties/propertyList">
-              <li
-                className="py-2 px-4 rounded mt-5"
-                onClick={() => handlePropertyTypeClick(22)}
-              >
-                Industrial Land
-              </li>
-            </Link>
-
-            <Link to="/properties/propertyList">
-              <li
-                className="py-2 px-4 rounded mt-5"
-                onClick={() => handlePropertyTypeClick(11)}
-              >
-                Other Commercial
-              </li>
-            </Link>
-          </ul>
-        </div>
+      <FilterTitle receiveData={receivedData} />
+      <main className="">
         <section className="max-w-7xl m-auto py-7">
           <div className="flex flex-wrap justify-center">
             {currentPost &&
