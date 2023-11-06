@@ -35,7 +35,6 @@ export const Form = () => {
           label="Message"
           multiline
           rows={4}
-          //   defaultValue="Message"
           variant="standard"
         />
       </Box>

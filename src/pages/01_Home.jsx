@@ -30,19 +30,19 @@ export default function Home() {
   const navigate = useNavigate();
 
   // ======================================= ito bago
-  // function showSpinner() {
-  //   document.querySelector('.spinner').classList.add('show');
-  // }
+  function showSpinner() {
+    document.querySelector('.spinner').classList.add('show');
+  }
 
-  // function hideSpinner() {
-  //   document.querySelector('.spinner').classList.remove('show');
-  // }
+  function hideSpinner() {
+    document.querySelector('.spinner').classList.remove('show');
+  }
 
-  // if (!properties) {
-  //   return showSpinner();
-  // } else {
-  //   hideSpinner();
-  // }
+  if (!properties) {
+    return showSpinner();
+  } else {
+    hideSpinner();
+  }
 
   return (
     <div>
@@ -69,7 +69,7 @@ export default function Home() {
               ))}
             </div>
           </section>
-          <main className="">
+          {/* <main className="">
             <section
               className="flex justify-center items-center self-center "
               style={{ height: '100vh' }}
@@ -93,7 +93,7 @@ export default function Home() {
                 <Form />
               </div>
             </section>
-          </main>
+          </main> */}
           <div>
             <div
               className="flex flex-col justify-center bg-black text-white"
@@ -120,17 +120,14 @@ export default function Home() {
                     <div className=" absolute inset-0 flex flex-col item-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all">
                       <button
                         className="px-3.5 py-2 rounded-full   bg-gray-900 text-sm capitalize text-white font-semibold hidden group-hover:block "
-                        onClick={() => navigate('properties/search')}
+                        onClick={() => navigate('/properties/search')}
                       >
                         Find Property
                       </button>
                     </div>
                   </div>
                 </div>
-                <div
-                  to="properties/search"
-                  className="flex flex-col justify-center items-center text-center  group relative"
-                >
+                <div className="flex flex-col justify-center items-center text-center  group relative">
                   <img
                     className="w-48 rounded-lg h-44"
                     src={photo4}
@@ -141,7 +138,7 @@ export default function Home() {
                     <div className=" absolute inset-0 flex flex-col item-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all">
                       <button
                         className="px-3.5 py-2 rounded-full   bg-gray-900 text-sm capitalize text-white font-semibold hidden group-hover:block "
-                        onClick={() => navigate('properties/search')}
+                        onClick={() => navigate('/properties/search')}
                       >
                         Find Property
                       </button>
@@ -159,7 +156,7 @@ export default function Home() {
                     <div className=" absolute inset-0 flex flex-col item-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all">
                       <button
                         className="px-3.5 py-2 rounded-full   bg-gray-900 text-sm capitalize text-white font-semibold hidden group-hover:block "
-                        onClick={() => navigate('properties/search')}
+                        onClick={() => navigate('/properties/search')}
                       >
                         Find Property
                       </button>
@@ -177,7 +174,7 @@ export default function Home() {
                     <div className=" absolute inset-0 flex flex-col item-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all">
                       <button
                         className="px-3.5 py-2 rounded-full   bg-gray-900 text-sm capitalize text-white font-semibold hidden group-hover:block "
-                        onClick={() => navigate('properties/search')}
+                        onClick={() => navigate('/properties/search')}
                       >
                         Find Property
                       </button>
@@ -188,7 +185,7 @@ export default function Home() {
                   <Tooltip content="Click for More:">
                     <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
                       <AddCircleIcon
-                        onClick={() => navigate('/search')}
+                        onClick={() => navigate('/properties/search')}
                         className="text-gray-500"
                       />
                     </span>
@@ -214,7 +211,7 @@ export default function Home() {
               </p>
               <div className="flex space-x-24">
                 <div>
-                  <Link to="properties/search">
+                  <Link to="/properties/search">
                     <img
                       className="w-72 h-72 p-1 bg-gray-500 rounded-none"
                       src={img2}
@@ -226,7 +223,7 @@ export default function Home() {
                   </Link>
                 </div>
                 <div>
-                  <Link to="properties/search">
+                  <Link to="/properties/search">
                     <img
                       className="w-72 h-72 p-1 bg-gray-500 rounded-none"
                       src={img1}

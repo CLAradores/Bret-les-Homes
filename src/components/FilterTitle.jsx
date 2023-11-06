@@ -4,7 +4,6 @@ import { FilterInputs } from './FilterInputs';
 
 export const FilterTitle = ({ receiveData }) => {
   const [showMenu, setshowMenu] = useState(false);
-  //   const [receivedData, setreceivedData] = useState(null);
 
   const getData = (data) => {
     receiveData(data);

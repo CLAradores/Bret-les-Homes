@@ -10,6 +10,22 @@ export const filterData = [
   },
   {
     items: [
+      { name: 'Apartment', value: '4' },
+      { name: 'Townhouses', value: '16' },
+      { name: 'Villas', value: '3' },
+      { name: 'Penthouses', value: '18' },
+      { name: 'Hotel Apartments', value: '21' },
+      { name: 'Villa Compound', value: '19' },
+      { name: 'Residential Plot', value: '14' },
+      { name: 'Residential Floor', value: '12' },
+      { name: 'Residential Building', value: '17' },
+    ],
+    placeholder: 'Property Type',
+    queryName: 'categoryExternalID',
+    id: 10,
+  },
+  {
+    items: [
       { name: 'Daily', value: 'daily' },
       { name: 'Weekly', value: 'weekly' },
       { name: 'Monthly', value: 'monthly' },
@@ -20,6 +36,7 @@ export const filterData = [
 
     id: 2,
   },
+
   {
     items: [
       { name: '10,000', value: '10000' },
@@ -51,116 +68,11 @@ export const filterData = [
       { name: '700,000', value: '700000' },
       { name: '800,000', value: '800000' },
       { name: '900,000', value: '900000' },
-      { name: '1000,000', value: '1000000' },
-      { name: '10,000,000', value: '10000000' },
-      { name: '20,000,000', value: '20000000' },
-      { name: '30,000,000', value: '30000000' },
-      { name: '40,000,000', value: '40000000' },
-      { name: '50,000,000', value: '50000000' },
-      { name: '60,000,000', value: '60000000' },
+      { name: '1,000,000', value: '1000000' },
     ],
     placeholder: 'Max Price(AED)',
     queryName: 'maxPrice',
     id: 4,
-  },
-  /*   {
-    items: [
-      { name: 'Lowest Price', value: 'price-asc' },
-      { name: 'Highest Price', value: 'price-des' },
-      { name: 'Newest', value: 'date-asc' },
-      { name: 'Oldest', value: 'date-desc' },
-      { name: 'Verified', value: 'verified-score' },
-      { name: 'City Level Score', value: 'city-level-score' },
-    ],
-    placeholder: 'Sort',
-    queryName: 'sort',
-    id: 5,
-  }, */
-  /*   {
-    items: [
-      { name: '1000', value: '1000' },
-      { name: '2000', value: '2000' },
-      { name: '3000', value: '3000' },
-      { name: '4000', value: '4000' },
-      { name: '5000', value: '5000' },
-      { name: '10000', value: '10000' },
-      { name: '20000', value: '20000' },
-    ],
-    placeholder: 'Max Area(sqft)',
-    queryName: 'areaMax',
-    id: 6,
-  }, */
-  /*   {
-    items: [
-      { name: '1', value: '1' },
-      { name: '2', value: '2' },
-      { name: '3', value: '3' },
-      { name: '4', value: '4' },
-      { name: '5', value: '5' },
-      { name: '6', value: '6' },
-      { name: '7', value: '7' },
-      { name: '8', value: '8' },
-      { name: '9', value: '9' },
-      { name: '10', value: '10' },
-    ],
-    placeholder: 'Rooms',
-    queryName: 'roomsMin',
-    id: 7,
-  }, */
-  /* {
-    items: [
-      { name: '1', value: '1' },
-      { name: '2', value: '2' },
-      { name: '3', value: '3' },
-      { name: '4', value: '4' },
-      { name: '5', value: '5' },
-      { name: '6', value: '6' },
-      { name: '7', value: '7' },
-      { name: '8', value: '8' },
-      { name: '9', value: '9' },
-      { name: '10', value: '10' },
-    ],
-    placeholder: 'Baths',
-    queryName: 'bathsMin',
-    id: 8,
-  }, */
-  /*   {
-    items: [
-      { name: 'Furnished', value: 'furnished' },
-      { name: 'Unfurnished', value: 'unfurnished' },
-    ],
-    placeholder: 'Furnish Type',
-    queryName: 'furnishingStatus',
-    id: 9,
-  }, */
-  {
-    items: [
-      { name: 'Apartment', value: '4' },
-      { name: 'Townhouses', value: '16' },
-      { name: 'Villas', value: '3' },
-      { name: 'Penthouses', value: '18' },
-      { name: 'Hotel Apartments', value: '21' },
-      { name: 'Villa Compound', value: '19' },
-      { name: 'Residential Plot', value: '14' },
-      { name: 'Residential Floor', value: '12' },
-      { name: 'Office', value: '5' },
-      { name: 'Shop', value: '6' },
-      { name: 'Warehouse', value: '7' },
-      { name: 'Labour camp', value: '9' },
-      { name: 'Commercial Villa ', value: '25' },
-      { name: 'Bulk Units ', value: '20' },
-      { name: 'Commercial Plot', value: '15' },
-      { name: 'Commercial Floor ', value: '13' },
-      { name: 'Commercial Building  ', value: '10' },
-      { name: 'Factory ', value: '8' },
-      { name: 'Industrial Land  ', value: '22' },
-      { name: 'Mixed Use Land ', value: '23' },
-      { name: 'Showroom ', value: '24' },
-      { name: 'Other Commercial ', value: '11' },
-    ],
-    placeholder: 'Property Type',
-    queryName: 'categoryExternalID',
-    id: 10,
   },
 ];
 

@@ -75,7 +75,7 @@ export const Footer = () => {
             <div className="flex gap-4 text-blue-gray-900 sm:justify-center">
               <Typography
                 as="a"
-                href="#"
+                href="https://facebook.com/"
                 className="opacity-80 transition-opacity hover:opacity-100"
               >
                 <svg
@@ -93,7 +93,7 @@ export const Footer = () => {
               </Typography>
               <Typography
                 as="a"
-                href="#"
+                href="https://instagram.com/"
                 className="opacity-80 transition-opacity hover:opacity-100"
               >
                 <svg
@@ -111,7 +111,7 @@ export const Footer = () => {
               </Typography>
               <Typography
                 as="a"
-                href="#"
+                href="https://twitter.com/"
                 className="opacity-80 transition-opacity hover:opacity-100"
               >
                 <svg
@@ -125,7 +125,7 @@ export const Footer = () => {
               </Typography>
               <Typography
                 as="a"
-                href="#"
+                href="https://github.com/"
                 className="opacity-80 transition-opacity hover:opacity-100"
               >
                 <svg

@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Carousel } from '@material-tailwind/react';
-import { Link } from 'react-router-dom';
 import { SemiFooter } from '../components';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import CropOriginalIcon from '@mui/icons-material/CropOriginal';
@@ -14,6 +13,7 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import { useNavigate } from 'react-router-dom';
 
 const options = {
   method: 'GET',
@@ -24,6 +24,8 @@ const options = {
 };
 
 export default function PropertyDetails() {
+  const navigate = useNavigate();
+
   const params = useParams();
   const [property, setProperty] = useState(null); // Initialize as null // pasakit sakin utak
 
@@ -77,17 +79,10 @@ export default function PropertyDetails() {
     product,
   } = property;
 
-  // useEffect(() => {
-  //   const iframeData = document.createElement('iframeId');
-  //   const lat = geography.lat;
-  //   const lon = geography.lng;
-  //   iframeData.src = `https://maps.google.com/maps?q=${lat},${lon}=es;&outpud=embed`;
-  // });
-
   return (
     <div>
       <main>
-        <h1 className=" mt-32 text-2xl font-medium mb-12">{title}</h1>
+        <h1 className=" mt-10 text-2xl font-medium mb-10">{title}</h1>
 
         <Carousel className="rounded-xl">
           {photos && //pasakit saking utak
@@ -169,13 +164,13 @@ export default function PropertyDetails() {
               Our listings are in high demand, so don’t wait until your chance
               is over. Talk to one of our agents now to schedule a viewing.
             </p>
-            <Link
-              to="properties/contactUs"
+            <span
+              onClick={() => navigate('/properties/contactUs')}
               type="button"
               className="text-black focus:ring-4 focus:outline-none w font-bold  text-sm px-4 py-2 text-center mr-3 md:mr-0 bg--color"
             >
               Booked a Viewing
-            </Link>
+            </span>
           </div>
         </div>
         <div className="flex justify-between">

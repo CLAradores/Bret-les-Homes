@@ -21,23 +21,26 @@ export const Header = () => {
       <div className="bg-black text-white py-2 ">
         <div className="flex justify-between max-w-6xl mx-auto text-sm font-medium">
           <div className="flex space-x-6  justify-center  ">
-            <div className="flex space-x-2 justify-center items-center ml-5  ">
+            <div
+              className="flex space-x-2 justify-center items-center ml-5  "
+              onClick={() => navigate('/properties/contactUs')}
+            >
               <LocalPhoneIcon style={{ fontSize: '1.2rem' }} />
               <h3>Call Now</h3>
             </div>
 
-            <div className="flex space-x-2">
+            <a className="flex space-x-2" href="https://facebook.com/">
               <FacebookIcon style={{ fontSize: '1.2rem' }} />
               <h3>Like us on Facebook</h3>
-            </div>
-            <div className="flex space-x-2">
+            </a>
+            <a className="flex space-x-2" href="https://instagram.com/">
               <InstagramIcon style={{ fontSize: '1.2rem' }} />
               <h3>Follow us on Instagram</h3>
-            </div>
-            <div className="flex space-x-2">
+            </a>
+            <a className="flex space-x-2" href="https://twitter.com/">
               <TwitterIcon style={{ fontSize: '1.2rem' }} />
               <h3>Follow us on Twitter</h3>
-            </div>
+            </a>
           </div>
           <div
             className="mr-5 flex space-x-1"

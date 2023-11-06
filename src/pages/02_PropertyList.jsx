@@ -9,7 +9,6 @@ import { FilterTitle } from '../components';
 
 export default function PropertyList() {
   const [received, setReceived] = useState('');
-  const [move, setMove] = useState(4);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostPerPage] = useState(9);
 
@@ -20,21 +19,19 @@ export default function PropertyList() {
 
   // -----------------------------------
   const purpose = received.purpose || 'for-sale';
-  const rentFrequency = received.rentFrequency || ' ';
-  const minPrice = received.minPrice || ' ';
-  const maxPrice = received.maxPrice || ' ';
-  const roomsMin = received.roomsMin || ' ';
-  const bathsMin = received.bathsMin || ' ';
+  const rentFrequency = received.rentFrequency || 'yearly';
+  const minPrice = received.minPrice || '0';
+  const maxPrice = received.maxPrice || '';
+  const roomsMin = received.roomsMin || '0';
+  const bathsMin = received.bathsMin || '0';
   const sort = received.sort || 'price-desc';
   const areaMax = received.areaMax || '35000';
   const locationExternalIDs = received.locationExternalIDs || '5002';
   const categoryExternalID = received.categoryExternalID || '4';
-  const baseUrl = 'https://bayut.p.rapidapi.com';
 
-  const url = `${baseUrl}/properties/list?locationExternalIDs=${locationExternalIDs}&purpose=${purpose}&categoryExternalID=${categoryExternalID}&bathsMin=${bathsMin}&rentFrequency=${rentFrequency}&priceMin=${minPrice}&priceMax=${maxPrice}&roomsMin=${roomsMin}&sort=${sort}&areaMax=${areaMax}`;
+  const url = `https://bayut.p.rapidapi.com/properties/list?locationExternalIDs=${locationExternalIDs}&purpose=${purpose}&categoryExternalID=${categoryExternalID}&bathsMin=${bathsMin}&rentFrequency=${rentFrequency}&priceMin=${minPrice}&priceMax=${maxPrice}&roomsMin=${roomsMin}&sort=${sort}&areaMax=${areaMax}`;
   // -----------------------------------
 
-  // const url = `https://bayut.p.rapidapi.com/properties/list?locationExternalIDs=5002%2C6020&purpose=for-sale&lang=en&categoryExternalID=${move}`;
   const options = {
     method: 'GET',
     headers: {
@@ -50,9 +47,6 @@ export default function PropertyList() {
 
   const currentPost = properties.slice(firstPostIndex, lastPostIndex);
 
-  const handlePropertyTypeClick = (newMove) => {
-    setMove(newMove);
-  };
   // ======================================= ito bago
   function showSpinner() {
     document.querySelector('.spinner').classList.add('show');
@@ -62,7 +56,7 @@ export default function PropertyList() {
     document.querySelector('.spinner').classList.remove('show');
   }
 
-  if (!properties) {
+  if (!currentPost) {
     return showSpinner();
   } else {
     hideSpinner();
@@ -72,6 +66,7 @@ export default function PropertyList() {
   return (
     <div>
       <HeroSection />
+
       <FilterTitle receiveData={receivedData} />
       <main className="">
         <section className="max-w-7xl m-auto py-7">

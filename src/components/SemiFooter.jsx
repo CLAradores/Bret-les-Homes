@@ -25,8 +25,8 @@ const LINKS = [
 const currentYear = new Date().getFullYear();
 export const SemiFooter = () => {
   return (
-    <main>
-      <main
+    <div>
+      {/* <main
         style={{ height: '90vh' }}
         className="flex flex-col items-center  text-center justify-center  overflow-hidden max-w-7xl"
       >
@@ -101,8 +101,8 @@ export const SemiFooter = () => {
             </div>
           </div>
         </div>
-      </main>
-      <div>
+      </main> */}
+      {/* <div>
         <main>
           <Box
             sx={{
@@ -116,7 +116,7 @@ export const SemiFooter = () => {
             }}
           >
             <h1 className="text-4xl text-center p-8">Our Newsletter</h1>
-            <div className="flex  space-x-4 w-auto">
+            <div className="flex justify-center items-center  space-x-4 w-auto">
               <TextField
                 fullWidth
                 id="demo-helper-text-misaligned"
@@ -155,7 +155,7 @@ export const SemiFooter = () => {
             </button>
           </Box>
         </main>
-      </div>
+      </div> 
       <div className="flex flex-col text-center items-center text-xl">
         <h3>CONNECT WITH US</h3>
         <div className="flex space-x-4 my-5 mb-10">
@@ -163,9 +163,9 @@ export const SemiFooter = () => {
           <InstagramIcon />
           <TwitterIcon />
         </div>
-      </div>
+      </div>*/}
 
-      <div className="relative max-w-7xl m-auto ">
+      <div className="relative max-w-7xl m-auto mt-12">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2 ">
           <Typography variant="h5" className="mb-6 ">
             Bret'les Homes
@@ -184,7 +184,7 @@ export const SemiFooter = () => {
                   <li key={link}>
                     <Typography
                       as="a"
-                      href="#"
+                      href="https://www.cision.com/resources/articles/real-estate-news-sites/"
                       color="gray"
                       className="py-1.5 font-normal transition-colors hover:text-blue-gray-900"
                     >
@@ -197,6 +197,6 @@ export const SemiFooter = () => {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 };

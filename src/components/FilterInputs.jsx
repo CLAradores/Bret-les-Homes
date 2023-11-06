@@ -77,7 +77,6 @@ export const FilterInputs = ({ getReceivedData }) => {
     // const propertyValue = filterValues[propertyName];
     // const result = `${propertyName}=${propertyValue}`;
     // console.log(filterValues.purpose);
-    console.log(filterValues);
     getReceivedData(filterValues);
 
     // ________________display to url ________________
