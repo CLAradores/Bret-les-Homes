@@ -14,20 +14,6 @@ const LazyHome = React.lazy(() => import('../pages/01_Home'));
 const LazyList = React.lazy(() => import('../pages/02_PropertyList'));
 const LazyDetails = React.lazy(() => import('../pages/03_PropertyDetails'));
 
-function showSpinner() {
-  document.querySelector('.spinner').classList.add('show');
-}
-
-function hideSpinner() {
-  document.querySelector('.spinner').classList.remove('show');
-}
-
-// if (!properties) {
-//   return showSpinner();
-// } else {
-//   hideSpinner();
-// }
-
 export const AllRoutes = () => {
   return (
     <>

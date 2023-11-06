@@ -7,4 +7,7 @@ export default defineConfig({
   server: {
     port: 3000,
   },
+  define: {
+    'import.meta.env.ENV_VARIABLE': JSON.stringify(process.env.ENV_VARIABLE),
+  },
 });

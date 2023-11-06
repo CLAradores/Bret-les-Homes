@@ -5,34 +5,24 @@ import {
   Button,
   Typography,
 } from '@material-tailwind/react';
+import { useNavigate } from 'react-router';
 
-export const SignUp = () => {
+export const Login = () => {
+  const navigate = useNavigate();
   return (
     <div>
-      <div className="login text-4xl font-semibold items-center">
-        <h2 className="max-w-6xl mx-auto flex justify-start  py-20">SIGN UP</h2>
+      <div className="login text-4xl font-semibold items-center ">
+        <h2 className="max-w-6xl mx-auto flex justify-start text-white  py-28">
+          LOG IN
+        </h2>
       </div>
       <div className="flex flex-col justify-start my-10 max-w-6xl mx-auto">
         <Card color="transparent" shadow={false}>
-          <Typography variant="h4" color="blue-gray">
-            Sign Up
-          </Typography>
           <Typography color="gray" className="mt-1 font-normal">
-            Nice to meet you! Enter your details to register.
+            Nice to meet you! Enter your details to login.
           </Typography>
           <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
             <div className="mb-1 flex flex-col gap-6">
-              <Typography variant="h6" color="blue-gray" className="-mb-3">
-                Your Name
-              </Typography>
-              <Input
-                size="lg"
-                placeholder="name@mail.com"
-                className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
-                labelProps={{
-                  className: 'before:content-none after:content-none',
-                }}
-              />
               <Typography variant="h6" color="blue-gray" className="-mb-3">
                 Your Email
               </Typography>
@@ -76,13 +66,17 @@ export const SignUp = () => {
               containerProps={{ className: '-ml-2.5' }}
             />
             <Button className="mt-6" fullWidth>
-              sign up
+              log in
             </Button>
             <Typography color="gray" className="mt-4 text-center font-normal">
-              Already have an account?{' '}
-              <a href="#" className="font-medium text-gray-900">
-                Sign In
-              </a>
+              Doesn't have an account?{' '}
+              <span
+                href="#"
+                className="font-medium text-gray-900"
+                onClick={() => navigate('/properties/signup')}
+              >
+                Sign Up
+              </span>
             </Typography>
           </form>
         </Card>

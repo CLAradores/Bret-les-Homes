@@ -1,4 +1,3 @@
-import QueryStatsIcon from '@mui/icons-material/QueryStats';
 import { useNavigate } from 'react-router-dom';
 
 export const HeroSection = () => {
