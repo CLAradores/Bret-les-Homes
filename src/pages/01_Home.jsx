@@ -54,7 +54,7 @@ export default function Home() {
             className="font-bold text-4xl text-center  "
             style={{ marginTop: '3rem' }}
           >
-            Featured Property
+            Featured Properties
           </h1>
           <section className="max-w-7xl m-auto ">
             <div className="flex flex-wrap justify-center m-10 ">
