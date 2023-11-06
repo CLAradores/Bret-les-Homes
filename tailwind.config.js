@@ -23,5 +23,3 @@ module.exports = withMT({
   },
   plugins: [],
 });
-
-// sas
