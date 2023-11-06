@@ -30,19 +30,19 @@ export default function Home() {
   const navigate = useNavigate();
 
   // ======================================= ito bago
-  function showSpinner() {
-    document.querySelector('.spinner').classList.add('show');
-  }
+  // function showSpinner() {
+  //   document.querySelector('.spinner').classList.add('show');
+  // }
 
-  function hideSpinner() {
-    document.querySelector('.spinner').classList.remove('show');
-  }
+  // function hideSpinner() {
+  //   document.querySelector('.spinner').classList.remove('show');
+  // }
 
-  if (!properties) {
-    return showSpinner();
-  } else {
-    hideSpinner();
-  }
+  // if (!properties) {
+  //   return showSpinner();
+  // } else {
+  //   hideSpinner();
+  // }
 
   return (
     <div>

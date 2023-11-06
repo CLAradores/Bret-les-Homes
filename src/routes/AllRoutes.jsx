@@ -7,6 +7,8 @@ import {
   ContactUs,
   AboutUs,
   PageNotFound,
+  Login,
+  SignUp,
 } from '../pages';
 const LazyHome = React.lazy(() => import('../pages/01_Home'));
 const LazyList = React.lazy(() => import('../pages/02_PropertyList'));
@@ -58,6 +60,9 @@ export const AllRoutes = () => {
         />
         <Route path="properties/contactUs" element={<ContactUs />} />
         <Route path="properties/aboutUs" element={<AboutUs />} />
+
+        <Route path="properties/login" element={<Login />} />
+        <Route path="properties/signup" element={<SignUp />} />
 
         <Route path="*" element={<PageNotFound />} />
       </Routes>

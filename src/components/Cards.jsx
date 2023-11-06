@@ -47,7 +47,7 @@ export function Cards({ property, location, category, coverPhoto }) {
             color="blue-gray"
             className="font-bold text-xl "
           >
-            د.إ {putComma(price)} {rentFrequency && `/ ${rentFrequency}`}
+            AED {putComma(price)} {rentFrequency && `/ ${rentFrequency}`}
           </Typography>
 
           <img

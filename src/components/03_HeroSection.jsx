@@ -19,12 +19,12 @@ export const HeroSection = () => {
           buying, selling, or just exploring, we're here to guide you every step
           of the way. Start your real estate journey with us today!"
         </h3>
-        <span
+        {/* <span
           className=" py-2 px-4 mt-10 text-black font-bold bg--color w-auto mx-auto flex space-x-2"
           onClick={() => navigate('properties/search')}
         >
           <h3>Find a Property</h3> <QueryStatsIcon />
-        </span>
+        </span> */}
       </div>
     </div>
   );

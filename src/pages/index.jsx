@@ -5,3 +5,5 @@ export { ContactUs } from './04_ContactUs';
 export { AboutUs } from './05_AboutUs';
 
 export { PageNotFound } from './06_PageNotFound';
+export { Login } from './07_Login';
+export { SignUp } from './08_SignUp';
