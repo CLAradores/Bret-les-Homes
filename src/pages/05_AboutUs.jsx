@@ -1,4 +1,6 @@
 import { SemiFooter } from '../components';
+import { useFetch } from '../hooks/useFetch';
+import { useEffect } from 'react';
 import photo from '../assets/teamwork2.webp';
 import photo1 from '../assets/sasa.jpeg';
 import { Link } from 'react-router-dom';
@@ -6,6 +8,18 @@ import charles from '../assets/charles.jpg';
 import jhonbret from '../assets/jhonbret.jpeg';
 
 export const AboutUs = () => {
+  const url =
+    'https://bayut.p.rapidapi.com/properties/list?locationExternalIDs=5002%2C6020';
+
+  const { data: logos } = useFetch(url, {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': import.meta.env.VITE_API_KEY,
+      'X-RapidAPI-Host': 'bayut.p.rapidapi.com',
+    },
+  });
+  console.log(logos);
+
   return (
     <div>
       <div className="about">
@@ -93,32 +107,7 @@ export const AboutUs = () => {
           alt="teamworkIMG"
         />
       </div>
-      {/* <div className="flex mt-48">
-        <div className="bg-black text-white w-1/2 photo"></div>
-        <div className="flex flex-col justify-center items-center text-center  w-1/2">
-          <h2 className="text-4xl font-medium mb-10">Why Us</h2>
-          <p className=" text-lg font-base w-3/4 m-auto">
-            the intricate landscape of real estate, brokerage firms serve as
-            beacons of expertise and reliability. At Parker Premier Real Estate,
-            we do more than just list properties; we offer a comprehensive suite
-            of services designed to elevate and simplify your property journey.
-            Here’s why choosing us makes all the difference: Tailored Solutions:
-            Especially when it comes to new developments, we ensure that every
-            detail aligns with your vision and needs. Unparalleled Inventory:
-            Our vast selection streamlines your search, ensuring you find the
-            property that feels like home or the perfect investment opportunity.
-            Seamless Mediation: Acting as your dedicated intermediary, we ensure
-            that every transaction is transparent, smooth, and stress-free.
-            Financing Guidance: Navigate the complexities of property financing
-            with our expertise, ensuring you secure the best loan terms.
-            Financial Mastery: Our in-depth understanding of the market
-            guarantees that you’re always presented with the most favorable and
-            suitable financing options. With Parker Premier Real Estate by your
-            side, you’re not just engaging with a brokerage; you’re partnering
-            with a firm that’s invested in your success.”
-          </p>
-        </div>
-      </div> */}
+
       <h3 className="flex flex-col justify-center items-center text-center text-4xl font-semibold mt-20">
         Meet Our Team
       </h3>
@@ -143,6 +132,16 @@ export const AboutUs = () => {
     </div>
   );
 };
+
+{
+  /* <img
+  style={{ width: '40px', height: '40px' }}
+  className="rounded-full"
+  src={image?.agency?.logo?.url}
+  alt="agency logo"
+/> */
+}
+
 {
   <div
     style={{ height: '50vh' }}

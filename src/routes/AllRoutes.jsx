@@ -40,7 +40,7 @@ export const AllRoutes = () => {
         />
 
         <Route
-          path="/search"
+          path="properties/search"
           element={
             <React.Suspense>
               <LazyList />

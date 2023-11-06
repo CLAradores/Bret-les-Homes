@@ -1,13 +1,50 @@
 import { useState } from 'react';
 import Logo from '../assets/logo.png';
 import { NavLink, Link } from 'react-router-dom';
+import Person2Icon from '@mui/icons-material/Person2';
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
 
 export const Header = () => {
   const [hidden, setHidden] = useState(true);
   return (
-    <div>
-      <nav className="bg-black dark:bg-gray-900 fixed w-full z-20 top-0 left-0 ">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <div className="relative">
+      {/* ---- */}
+      <div className="bg-black text-white py-2 ">
+        <div className="flex justify-between max-w-6xl mx-auto text-sm font-medium">
+          <div className="flex space-x-6  justify-center  ">
+            <div className="flex space-x-2 justify-center items-center ml-5  ">
+              <LocalPhoneIcon style={{ fontSize: '1.2rem' }} />
+              <h3>Call Now</h3>
+            </div>
+
+            <div className="flex space-x-2">
+              <FacebookIcon style={{ fontSize: '1.2rem' }} />
+              <h3>Like us on Facebook</h3>
+            </div>
+            <div className="flex space-x-2">
+              <InstagramIcon style={{ fontSize: '1.2rem' }} />
+              <h3>Follow us on Instagram</h3>
+            </div>
+            <div className="flex space-x-2">
+              <TwitterIcon style={{ fontSize: '1.2rem' }} />
+              <h3>Follow us on Twitter</h3>
+            </div>
+          </div>
+          <div className="mr-5 flex space-x-1">
+            <Person2Icon style={{ fontSize: '1.2rem' }} />
+            <h3>Login</h3>
+          </div>
+        </div>
+      </div>
+      {/* ---- */}
+      <nav
+        className="bg-black dark:bg-gray-900  w-full z-20  sticky top-0"
+        style={{ position: '-webkit-sticky', position: 'sticky', top: '0' }}
+      >
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-2 ">
           <div className=" rounded">
             <Link to="" className="flex items-center ">
               <img
@@ -24,7 +61,7 @@ export const Header = () => {
             <Link
               to="properties/contactUs"
               type="button"
-              className="text-black focus:ring-4 focus:outline-none  font-bold  text-sm px-4 py-2 text-center mr-3 md:mr-0 "
+              className="text-black focus:ring-4 focus:outline-none  font-semibold  text-sm px-4 py-2 text-center mr-3 md:mr-0 bg--color"
             >
               Booked a Viewing
             </Link>
@@ -54,10 +91,10 @@ export const Header = () => {
               </svg>
             </button>
           </div>
-          <div
+          <nav
             className={`${
               hidden ? 'hidden' : ''
-            } items-center justify-between  w-full md:flex md:w-auto md:order-1`}
+            } items-center justify-between  w-full md:flex md:w-auto md:order-1 stroke`}
             id="navbar-sticky"
           >
             <ul className="flex text-white font-bold space-x-5">
@@ -74,7 +111,7 @@ export const Header = () => {
               </li>
               <li>
                 <NavLink
-                  to="search"
+                  to="properties/search"
                   className={({ isActive }) =>
                     [isActive ? 'active--link' : ''].join(' ')
                   }
@@ -103,7 +140,7 @@ export const Header = () => {
                 </NavLink>
               </li>
             </ul>
-          </div>
+          </nav>
         </div>
       </nav>
       {/* <HeroSection /> */}

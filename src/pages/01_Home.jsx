@@ -1,6 +1,6 @@
 import { useFetch } from '../hooks/useFetch';
 import { useState } from 'react';
-// import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { HeroSection } from '../components';
 import { Cards } from '../components';
@@ -27,41 +27,22 @@ const options = {
 };
 export default function Home() {
   const { data: properties } = useFetch(url, options);
-
-  // console.log(results.hits);
-  // const fetchProperties = async (req, res) => {
-  //   try {
-  //     const response = await fetch(req, res);
-  //     if (!response.ok) {
-  //       throw new Error('Network response was not ok');
-  //     }
-  //     const result = await response.json();
-  //     setProperties(result.hits);
-
-  //     console.log(result.hits);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   fetchProperties(url, options);
-  // }, [url, options]);
+  const navigate = useNavigate();
 
   // ======================================= ito bago
-  // function showSpinner() {
-  //   document.querySelector('.spinner').classList.add('show');
-  // }
+  function showSpinner() {
+    document.querySelector('.spinner').classList.add('show');
+  }
 
-  // function hideSpinner() {
-  //   document.querySelector('.spinner').classList.remove('show');
-  // }
+  function hideSpinner() {
+    document.querySelector('.spinner').classList.remove('show');
+  }
 
-  // if (!properties) {
-  //   return showSpinner();
-  // } else {
-  //   hideSpinner();
-  // }
+  if (!properties) {
+    return showSpinner();
+  } else {
+    hideSpinner();
+  }
 
   return (
     <div>
@@ -118,15 +99,15 @@ export default function Home() {
               className="flex flex-col justify-center bg-black text-white"
               style={{ height: '70vh', width: '100%' }}
             >
-              <div className="flex flex-col text-center">
+              <div className="flex flex-col text-center divColor">
                 <h3 className="text-lg mb-10">We're Here To Help You</h3>
                 <h1 className="mb-10 text-4xl font-medium">
                   What Are You Looking For?
                 </h1>
               </div>
               <div className="flex flex-nowrap  justify-center space-x-10">
-                <Link
-                  to="properties/propertyList"
+                <div
+                  to="/search"
                   className=" group relative flex flex-col justify-center items-center text-center  "
                 >
                   <img
@@ -137,14 +118,17 @@ export default function Home() {
                   <p className="mt-8 font-semibold text-2xl">Apartments</p>
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black-70">
                     <div className=" absolute inset-0 flex flex-col item-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all">
-                      <button className="px-3.5 py-2 rounded-full   bg-gray-900 text-sm capitalize text-white font-semibold hidden group-hover:block ">
+                      <button
+                        className="px-3.5 py-2 rounded-full   bg-gray-900 text-sm capitalize text-white font-semibold hidden group-hover:block "
+                        onClick={() => navigate('properties/search')}
+                      >
                         Find Property
                       </button>
                     </div>
                   </div>
-                </Link>
-                <Link
-                  to="properties/propertyList"
+                </div>
+                <div
+                  to="properties/search"
                   className="flex flex-col justify-center items-center text-center  group relative"
                 >
                   <img
@@ -155,16 +139,16 @@ export default function Home() {
                   <p className="mt-8 font-semibold text-2xl">Townhouse</p>
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black-70">
                     <div className=" absolute inset-0 flex flex-col item-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all">
-                      <button className="px-3.5 py-2 rounded-full   bg-gray-900 text-sm capitalize text-white font-semibold hidden group-hover:block ">
+                      <button
+                        className="px-3.5 py-2 rounded-full   bg-gray-900 text-sm capitalize text-white font-semibold hidden group-hover:block "
+                        onClick={() => navigate('properties/search')}
+                      >
                         Find Property
                       </button>
                     </div>
                   </div>
-                </Link>
-                <Link
-                  to="properties/propertyList"
-                  className="flex flex-col justify-center items-center text-center  group relative"
-                >
+                </div>
+                <div className="flex flex-col justify-center items-center text-center  group relative">
                   <img
                     className="w-48 rounded-lg h-44"
                     src={photo3}
@@ -173,16 +157,16 @@ export default function Home() {
                   <p className="mt-8 font-semibold text-2xl">Penthouses</p>
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black-70">
                     <div className=" absolute inset-0 flex flex-col item-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all">
-                      <button className="px-3.5 py-2 rounded-full   bg-gray-900 text-sm capitalize text-white font-semibold hidden group-hover:block ">
+                      <button
+                        className="px-3.5 py-2 rounded-full   bg-gray-900 text-sm capitalize text-white font-semibold hidden group-hover:block "
+                        onClick={() => navigate('properties/search')}
+                      >
                         Find Property
                       </button>
                     </div>
                   </div>
-                </Link>
-                <Link
-                  to="properties/propertyList"
-                  className="flex flex-col justify-center items-center text-center group relative "
-                >
+                </div>
+                <div className="flex flex-col justify-center items-center text-center group relative ">
                   <img
                     className="w-48 rounded-lg h-44"
                     src={photo1}
@@ -191,23 +175,26 @@ export default function Home() {
                   <p className="mt-8 font-semibold text-2xl">Villas</p>
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black-70">
                     <div className=" absolute inset-0 flex flex-col item-center justify-center px-9 text-center translate-y-[60%] group-hover:translate-y-0 transition-all">
-                      <button className="px-3.5 py-2 rounded-full   bg-gray-900 text-sm capitalize text-white font-semibold hidden group-hover:block ">
+                      <button
+                        className="px-3.5 py-2 rounded-full   bg-gray-900 text-sm capitalize text-white font-semibold hidden group-hover:block "
+                        onClick={() => navigate('properties/search')}
+                      >
                         Find Property
                       </button>
                     </div>
                   </div>
-                </Link>
-                <Link
-                  to="/search"
-                  className="flex flex-col justify-center items-center text-center  "
-                >
+                </div>
+                <div className="flex flex-col justify-center items-center text-center  ">
                   <Tooltip content="Click for More:">
                     <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
-                      <AddCircleIcon />
+                      <AddCircleIcon
+                        onClick={() => navigate('/search')}
+                        className="text-gray-500"
+                      />
                     </span>
                   </Tooltip>
                   <p className="mt-8 font-semibold text-2xl">And More</p>
-                </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -227,9 +214,9 @@ export default function Home() {
               </p>
               <div className="flex space-x-24">
                 <div>
-                  <Link to="/search">
+                  <Link to="properties/search">
                     <img
-                      className="w-72 h-72 p-1 bg-gray-500 rounded-md"
+                      className="w-72 h-72 p-1 bg-gray-500 rounded-none"
                       src={img2}
                       alt="Buy_IMG"
                     />
@@ -239,9 +226,9 @@ export default function Home() {
                   </Link>
                 </div>
                 <div>
-                  <Link to="/search">
+                  <Link to="properties/search">
                     <img
-                      className="w-72 h-72 p-1 bg-gray-500 rounded-md"
+                      className="w-72 h-72 p-1 bg-gray-500 rounded-none"
                       src={img1}
                       alt="Sell_img"
                     />

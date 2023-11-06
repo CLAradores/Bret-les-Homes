@@ -54,7 +54,7 @@ export default function PropertyList() {
     setMove(newMove);
   };
   // ======================================= ito bago
-  /*  function showSpinner() {
+  function showSpinner() {
     document.querySelector('.spinner').classList.add('show');
   }
 
@@ -66,7 +66,7 @@ export default function PropertyList() {
     return showSpinner();
   } else {
     hideSpinner();
-  } */
+  }
   // ------------
 
   return (

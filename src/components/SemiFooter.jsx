@@ -1,11 +1,12 @@
 import React from 'react';
 import { Typography } from '@material-tailwind/react';
 import { Rating } from '@material-tailwind/react';
-
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-
 import MenuItem from '@mui/material/MenuItem';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
 
 const LINKS = [
   {
@@ -117,15 +118,12 @@ export const SemiFooter = () => {
             <h1 className="text-4xl text-center p-8">Our Newsletter</h1>
             <div className="flex  space-x-4 w-auto">
               <TextField
-                // style={{ backgroundColor: 'white' }}
                 fullWidth
-                // helperText="Please enter your firstname"
                 id="demo-helper-text-misaligned"
                 label="Firstname"
               />
               <TextField
                 fullWidth
-                helperText="Please enter your lastname"
                 id="demo-helper-text-misaligned"
                 label="Lastame"
               />
@@ -157,6 +155,14 @@ export const SemiFooter = () => {
             </button>
           </Box>
         </main>
+      </div>
+      <div className="flex flex-col text-center items-center text-xl">
+        <h3>CONNECT WITH US</h3>
+        <div className="flex space-x-4 my-5 mb-10">
+          <FacebookIcon />
+          <InstagramIcon />
+          <TwitterIcon />
+        </div>
       </div>
 
       <div className="relative max-w-7xl m-auto ">

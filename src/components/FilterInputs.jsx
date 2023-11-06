@@ -73,17 +73,17 @@ export const FilterInputs = ({ getReceivedData }) => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const handleFilterChange = (filterValues, name) => {
-    const propertyName = Object.keys(filterValues)[0];
-    const propertyValue = filterValues[propertyName];
-    const result = `${propertyName}=${propertyValue}`;
+    // const propertyName = Object.keys(filterValues)[0];
+    // const propertyValue = filterValues[propertyName];
+    // const result = `${propertyName}=${propertyValue}`;
     // console.log(filterValues.purpose);
+    console.log(filterValues);
     getReceivedData(filterValues);
 
     // ________________display to url ________________
     const updatedSearchParams = new URLSearchParams(searchParams.toString());
     updatedSearchParams.set(filterValues, name);
     setSearchParams(filterValues, name);
-    console.log(filterValues);
   };
 
   return (
