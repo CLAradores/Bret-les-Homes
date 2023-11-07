@@ -47,6 +47,13 @@ export default function PropertyList() {
 
   const currentPost = properties.slice(firstPostIndex, lastPostIndex);
 
+  if (currentPost === null || currentPost === undefined || currentPost === 0) {
+    return (
+      <div className="flex justify-center text-center text-center text-4xl font-semibold">
+        <h2>No Result Found</h2>
+      </div>
+    );
+  }
   // ======================================= ito bago
   function showSpinner() {
     document.querySelector('.spinner').classList.add('show');

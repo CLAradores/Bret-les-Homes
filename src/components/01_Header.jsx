@@ -12,10 +12,8 @@ export const Header = () => {
   const [hidden, setHidden] = useState(true);
   const navigate = useNavigate();
 
-  const handleToggle = () => {};
-
   return (
-    <div className="relative">
+    <div>
       {/* ---- */}
       <div className="bg-black text-white py-2 ">
         <div className="flex justify-between max-w-6xl mx-auto text-sm font-medium">

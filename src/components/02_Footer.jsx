@@ -76,6 +76,7 @@ export const Footer = () => {
               <Typography
                 as="a"
                 href="https://facebook.com/"
+                target="_blank"
                 className="opacity-80 transition-opacity hover:opacity-100"
               >
                 <svg
@@ -94,6 +95,7 @@ export const Footer = () => {
               <Typography
                 as="a"
                 href="https://instagram.com/"
+                target="_blank"
                 className="opacity-80 transition-opacity hover:opacity-100"
               >
                 <svg
@@ -112,6 +114,7 @@ export const Footer = () => {
               <Typography
                 as="a"
                 href="https://twitter.com/"
+                target="_blank"
                 className="opacity-80 transition-opacity hover:opacity-100"
               >
                 <svg
@@ -126,6 +129,7 @@ export const Footer = () => {
               <Typography
                 as="a"
                 href="https://github.com/"
+                target="_blank"
                 className="opacity-80 transition-opacity hover:opacity-100"
               >
                 <svg

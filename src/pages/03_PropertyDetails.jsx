@@ -72,11 +72,11 @@ export default function PropertyDetails() {
     description,
     amenities,
     photos,
-    geography,
     location,
     area,
     agency,
     product,
+    category,
   } = property;
 
   return (
@@ -99,7 +99,10 @@ export default function PropertyDetails() {
         <div className="  flex flex-row mt-20 text-medium font-medium">
           <div className="basis-1/2 flex justify-between">
             <h2>Property ID:{id}</h2>
-            <h2>Property Type:</h2>
+            <h2>
+              Property Type: &nbsp;{' '}
+              {category && category.map((item) => item.name)}
+            </h2>
           </div>
         </div>
         <h2 className="text-3xl font-medium mt-5"> $ {putComma(price)}</h2>

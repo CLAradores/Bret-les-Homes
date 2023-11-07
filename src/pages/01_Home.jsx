@@ -69,31 +69,7 @@ export default function Home() {
               ))}
             </div>
           </section>
-          {/* <main className="">
-            <section
-              className="flex justify-center items-center self-center "
-              style={{ height: '100vh' }}
-            >
-              <div className="text-left w-1/2 ms-10">
-                <h3 className="text-2xl font-medium mb-4">Craft Your Dream</h3>
-                <h3 className="text-4xl font-bold mb-4">
-                  Bret'les Premier Real Estate
-                </h3>
-                <h3 className="text-2xl font-base mb-4">
-                  Leading Property Broker in Abu Dhabi
-                </h3>
-                <p>
-                  Welcome to Parker Premier Real Estate, your premium
-                  destination for all your real estate needs. Whether you’re
-                  looking to buy, sell, or invest in properties, we are here to
-                  guide you every step of the way.
-                </p>
-              </div>
-              <div>
-                <Form />
-              </div>
-            </section>
-          </main> */}
+
           <div>
             <div
               className="flex flex-col justify-center bg-black text-white"
