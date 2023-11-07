@@ -15,7 +15,7 @@ export const Header = () => {
   return (
     <div>
       {/* ---- */}
-      <div className="bg-black text-white py-2 ">
+      <div className="bg-black text-white py-2 2xl:block xl:block lg:block sm:hidden xs:hiden hidden">
         <div className="flex justify-between max-w-6xl mx-auto text-sm font-medium">
           <div className="flex space-x-6  justify-center  ">
             <div
