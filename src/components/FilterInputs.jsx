@@ -73,10 +73,6 @@ export const FilterInputs = ({ getReceivedData }) => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const handleFilterChange = (filterValues, name) => {
-    // const propertyName = Object.keys(filterValues)[0];
-    // const propertyValue = filterValues[propertyName];
-    // const result = `${propertyName}=${propertyValue}`;
-    // console.log(filterValues.purpose);
     getReceivedData(filterValues);
 
     // ________________display to url ________________

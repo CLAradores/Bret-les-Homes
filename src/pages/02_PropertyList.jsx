@@ -75,6 +75,7 @@ export default function PropertyList() {
       <HeroSection />
 
       <FilterTitle receiveData={receivedData} />
+
       <main className="">
         <section className="max-w-7xl m-auto py-7">
           <div className="flex flex-wrap justify-center">
