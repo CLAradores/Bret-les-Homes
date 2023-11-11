@@ -118,7 +118,7 @@ export function Cards({ property, location, category, coverPhoto }) {
         </div>
       </CardBody>
       <CardFooter className="pt-3 ">
-        <div onClick={() => navigate('properties/contactUs')}>
+        <div onClick={() => navigate('/properties/contactUs')}>
           <Button
             className=" bg--color1 rounded-none"
             size="lg"
