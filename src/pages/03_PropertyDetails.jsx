@@ -105,7 +105,7 @@ export default function PropertyDetails() {
             </h2>
           </div>
         </div>
-        <h2 className="text-3xl font-medium mt-5"> $ {putComma(price)}</h2>
+        <h2 className="text-3xl font-medium mt-5"> AED {putComma(price)}</h2>
         <div className="flex justify-between">
           <div className="flex ">
             <div className="flex flex-col  font-base justify-center items-center ">

@@ -247,17 +247,21 @@ export const AboutUs = () => {
             }}
           >
             <h1 className="text-4xl text-center p-8">Our Newsletter</h1>
-            <div className="flex justify-center items-center  space-x-4 w-auto">
-              <TextField
-                fullWidth
-                id="demo-helper-text-misaligned"
-                label="Firstname"
-              />
-              <TextField
-                fullWidth
-                id="demo-helper-text-misaligned"
-                label="Lastame"
-              />
+            <div className="flex  justify-between items-center">
+              <div className="w-screen mr-3">
+                <TextField
+                  fullWidth
+                  id="demo-helper-text-misaligned"
+                  label="Firstname"
+                />
+              </div>
+              <div className="w-screen ml-3 flex justify-end">
+                <TextField
+                  fullWidth
+                  id="demo-helper-text-misaligned"
+                  label="Lastname"
+                />
+              </div>
             </div>
             <TextField fullWidth label="E-mail" id="fullWidth" />
             <TextField fullWidth label="Contact Number" id="fullWidth" />
@@ -306,42 +310,3 @@ export const AboutUs = () => {
     </div>
   );
 };
-
-{
-  /* <img
-  style={{ width: '40px', height: '40px' }}
-  className="rounded-full"
-  src={image?.agency?.logo?.url}
-  alt="agency logo"
-/> */
-}
-
-// {
-//   <div
-//     style={{ height: '50vh' }}
-//     className="flex flex-col justify-center items-center text-center"
-//   >
-//     <div>
-//       <h2 className="text-6xl font-medium mb-20">Why Us</h2>
-//       <p className=" text-lg font-base w-3/4 m-auto">
-//         the intricate landscape of real estate, brokerage firms serve as beacons
-//         of expertise and reliability. At Parker Premier Real Estate, we do more
-//         than just list properties; we offer a comprehensive suite of services
-//         designed to elevate and simplify your property journey. Here’s why
-//         choosing us makes all the difference: Tailored Solutions: Especially
-//         when it comes to new developments, we ensure that every detail aligns
-//         with your vision and needs. Unparalleled Inventory: Our vast selection
-//         streamlines your search, ensuring you find the property that feels like
-//         home or the perfect investment opportunity. Seamless Mediation: Acting
-//         as your dedicated intermediary, we ensure that every transaction is
-//         transparent, smooth, and stress-free. Financing Guidance: Navigate the
-//         complexities of property financing with our expertise, ensuring you
-//         secure the best loan terms. Financial Mastery: Our in-depth
-//         understanding of the market guarantees that you’re always presented with
-//         the most favorable and suitable financing options. With Parker Premier
-//         Real Estate by your side, you’re not just engaging with a brokerage;
-//         you’re partnering with a firm that’s invested in your success.”
-//       </p>
-//     </div>
-//   </div>;
-// }
