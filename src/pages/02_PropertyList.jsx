@@ -4,7 +4,6 @@ import { Pagination } from '../components';
 import { Cards } from '../components';
 import { HeroSection } from '../components';
 import { SemiFooter } from '../components';
-import { Link } from 'react-router-dom';
 import { FilterTitle } from '../components';
 
 export default function PropertyList() {
@@ -49,12 +48,13 @@ export default function PropertyList() {
 
   if (currentPost === null || currentPost === undefined || currentPost === 0) {
     return (
-      <div className="flex justify-center text-center text-center text-4xl font-semibold">
+      <div className="flex justify-center text-center  text-4xl font-semibold">
         <h2>No Result Found</h2>
       </div>
     );
   }
-  // ======================================= ito bago
+
+  //Spinner
   function showSpinner() {
     document.querySelector('.spinner').classList.add('show');
   }

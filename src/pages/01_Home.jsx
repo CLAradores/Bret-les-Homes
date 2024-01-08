@@ -39,7 +39,7 @@ export default function Home() {
   }
 
   if (!properties) {
-    return showSpinner();
+    showSpinner();
   } else {
     hideSpinner();
   }

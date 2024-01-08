@@ -40,7 +40,7 @@ export const Header = () => {
             </a>
           </div>
           <div
-            className="mr-5 flex space-x-1"
+            className="mr-5 flex space-x-1 cursor-pointer"
             onClick={() => navigate('properties/login')}
           >
             <Person2Icon style={{ fontSize: '1.2rem' }} />
@@ -50,7 +50,9 @@ export const Header = () => {
         </div>
       </div>
 
-      <nav className="bg-black dark:bg-gray-900  w-full  sticky top-0 ">
+      <nav
+        className={`sticky top-0 z-50 bg-black dark:bg-gray-900 w-full  transition-all`}
+      >
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-2  ">
           <div className=" rounded">
             <Link to="" className="flex items-center ">
