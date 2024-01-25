@@ -1,15 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import {
-  // Home,
-  // PropertyList,
-  // PropertyDetails,
-  ContactUs,
-  AboutUs,
-  PageNotFound,
-  Login,
-  SignUp,
-} from '../pages';
+import { ContactUs, AboutUs, PageNotFound, Login, SignUp } from '../pages';
 const LazyHome = React.lazy(() => import('../pages/01_Home'));
 const LazyList = React.lazy(() => import('../pages/02_PropertyList'));
 const LazyDetails = React.lazy(() => import('../pages/03_PropertyDetails'));

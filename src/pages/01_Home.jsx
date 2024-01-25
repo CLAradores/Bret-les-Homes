@@ -1,10 +1,8 @@
 import { useFetch } from '../hooks/useFetch';
-import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { HeroSection } from '../components';
 import { Cards } from '../components';
-import { Form } from '../components';
 import { SemiFooter } from '../components';
 import photo1 from '../assets/villa.webp';
 import photo2 from '../assets/apartment.webp';
@@ -29,7 +27,6 @@ export default function Home() {
   const { data: properties } = useFetch(url, options);
   const navigate = useNavigate();
 
-  // ======================================= ito bago
   function showSpinner() {
     document.querySelector('.spinner').classList.add('show');
   }

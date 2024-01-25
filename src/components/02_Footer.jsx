@@ -5,62 +5,6 @@ const currentYear = new Date().getFullYear();
 export const Footer = () => {
   return (
     <div>
-      {/* <main className="">
-        <div>
-          <Box
-            sx={{
-              display: 'flex flex-column',
-              alignItems: 'center',
-              maxWidth: '50vw',
-              margin: 'auto',
-
-              '& > :not(style)': { m: 1 },
-            }}
-          >
-            <h1 className="text-5xl text-center p-8">Message Us</h1>
-            <div className="flex  space-x-4 w-auto">
-              <TextField
-                // style={{ backgroundColor: 'white' }}
-                fullWidth
-                helperText="Please enter your firstname"
-                id="demo-helper-text-misaligned"
-                label="Firstname"
-              />
-              <TextField
-                fullWidth
-                helperText="Please enter your lastname"
-                id="demo-helper-text-misaligned"
-                label="Lastame"
-              />
-            </div>
-            <TextField fullWidth label="E-mail" id="fullWidth" />
-            <TextField fullWidth label="Contact Number" id="fullWidth" />
-            <TextField
-              fullWidth
-              id="outlined-select-currency"
-              select
-              label="Select"
-            >
-              <MenuItem>Buyer</MenuItem>
-              <MenuItem>Seller</MenuItem>
-            </TextField>
-            <TextField
-              fullWidth
-              id="standard-multiline-static"
-              label="Message"
-              multiline
-              rows={4}
-              variant="standard"
-            />
-            <button
-              style={{ width: '100%', backgroundColor: '#e5b136' }}
-              className=" py-4  text-xl"
-            >
-              Subscribe
-            </button>
-          </Box>
-        </div>
-      </main> */}
       <footer className="relative w-full bg-black ">
         <div className="mx-auto w-full max-w-7xl px-8">
           <div className="mt-12 flex w-full flex-col items-center justify-center border-t border-blue-gray-50 py-4 md:flex-row md:justify-between">

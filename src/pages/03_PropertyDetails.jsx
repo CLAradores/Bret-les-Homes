@@ -46,7 +46,7 @@ export default function PropertyDetails() {
       }
     };
     fetchProperties();
-  }, [params.externalID]);
+  }, []);
 
   function putComma(number) {
     return number.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',');

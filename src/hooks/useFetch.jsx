@@ -1,9 +1,15 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 export const useFetch = (URL, OPTIONS) => {
   const [data, setData] = useState([]);
+  const ref = useRef(new Map());
+  const cachedName = ref.current;
 
   useEffect(() => {
+    if (cachedName.has('cachedData')) {
+      setData(cachedName.get('cachedData'));
+      return;
+    }
     const fetchProperties = async () => {
       try {
         const response = await fetch(URL, OPTIONS);
@@ -12,6 +18,7 @@ export const useFetch = (URL, OPTIONS) => {
         }
         const result = await response.json();
         setData(result.hits);
+        cachedName.set('cachedData', result.hits);
       } catch (error) {
         console.log(error);
       }

@@ -1,12 +1,5 @@
 import React from 'react';
 import { Typography } from '@material-tailwind/react';
-import { Rating } from '@material-tailwind/react';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-import MenuItem from '@mui/material/MenuItem';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import TwitterIcon from '@mui/icons-material/Twitter';
 
 const LINKS = [
   {
@@ -22,7 +15,6 @@ const LINKS = [
     items: ['Blog', 'Newsletter', 'Events', 'Help center'],
   },
 ];
-const currentYear = new Date().getFullYear();
 export const SemiFooter = () => {
   return (
     <div>
